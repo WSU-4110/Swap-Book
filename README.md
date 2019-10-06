@@ -6,4 +6,6 @@ Website for WSU students to swap textbooks. Site allows students to list textboo
 ## Built With  
 - HTML
 - CSS
-- JavaScript  
+- JavaScript
+- MySQL
+- PHP
