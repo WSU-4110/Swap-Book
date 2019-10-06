@@ -1,6 +1,5 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
-
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -8,92 +7,98 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link rel="stylesheet" href="styles/main.css">
- <script src="https://kit.fontawesome.com/f262395e7c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
+
+    <script src="https://kit.fontawesome.com/f262395e7c.js" crossorigin="anonymous"></script>
     <title>Swap-Book</title>
-  </head>
-   <body>
-  <div class="row">
-	<div class="col col-xs-12 col-sm-12 col-md-12   col-lg-3  col-xl-2">
-    <nav class="navbar navbar-inverse navbar-expand-lg navbar-expand-xl">
-  <!--Navbar-->
+</head>
+<body>
+    <div id="wrapper">
+        <div class="row h-100">
+            <div class="col col-12 col-xs-12 col-sm-12 col-md-12  col-lg-3  col-xl-2" id="navCol">
+                <nav class="navbar navbar-light purple lighten-4 mb-3 navbar-inverse navbar-expand-lg navbar-expand-xl mainNav h-100 align-items-start">
 
-<nav class="navbar navbar-light purple lighten-4 mb-3">
+                    <!--Navbar-->
+                    <!-- Navbar brand -->
+                    <!--  <a class="navbar-brand" href="#">Navbar</a> -->
+                    <!-- Collapse button -->
+                    <button class="navbar-toggler alwaysShowHam purple darken-3 order-lg-2 align-top" type="button" data-toggle="collapse"
+                            data-target="#hamList" id="MainHamMenu" aria-controls="navbarSupportedContent41" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                        <span class="white-text"><i class="fas fa-bars fa-1x"></i></span>
+                    </button>
+					
+					
+                    <!-- Collapsible content -->
+                    <div class="collapse navbar-collapse " id="navbarSupportedContent41">
 
-  <!-- Navbar brand -->
-  <a class="navbar-brand" href="#">User Menu</a>
+                        <!-- Links -->
+                        <ul class="navbar-nav mr-auto>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Account<span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">History</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Sign Out</a>
+                            </li>
+                        </ul>
+                        <!-- Links -->
 
-  <!-- Collapse button -->
-  <button class="navbar-toggler toggler-example purple darken-3" type="button" data-toggle="collapse"
-    data-target="#navbarSupportedContent41" aria-controls="navbarSupportedContent41" aria-expanded="false"
-    aria-label="Toggle navigation"><span class="white-text"><i class="fas fa-bars fa-1x"></i></span></button>
-	<!-- Collapsible content -->
-  <div class="collapse navbar-collapse " id="navbarSupportedContent41">
+                </nav>
+                <!-- Collapsible content -->
+        </div>
+        <!--/.Navbar-->
+        <div class="col col-xs-12 col-sm-12 col-md-12   col-lg-9 col-xl-10">
 
-    <!-- Links -->
-    <ul class="navbar-nav mr-auto>
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Account<span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">History</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Sign Out</a>
-      </li>
-    </ul>
-    <!-- Links -->
+            <h1>Swap-Book</h1>
+           
+		   <!-- Search form -->
+            <div class="container align">
+                <div class="input-group md-form form-sm form-2 pl-0">
+                    <input class="form-control my-0 py-1 red-border" type="text" placeholder="Search By: ISBN, Author, Book Name" aria-label="Search">
+                    <div class="input-group-append">
+                        <span class="input-group-text red lighten-3" id="basic-text1">
+                            <i class="fas fa-search text-grey"
+                               aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <div class="container">
+                        <div class="row radio">
+                            <div class="col">
+                                <label class="radio-inline">
+                                    <input type="radio" name="survey" id="Radios2" value="No">
+                                    New
+                                </label>
+                            </div>
+                            <div class="col">
+                                <label class="radio-inline">
+                                    <input type="radio" name="survey" id="Radios2" value="No">
+                                    Used
+                                </label>
+                            </div>
+                            <div class="col">
+                                <label class="radio-inline">
+                                    <input type="radio" name="survey" id="Radios2" value="No">
+                                    E-Copy
+                                </label>
+                            </div>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam nulla facilisi cras fermentum odio eu feugiat. Interdum velit laoreet id donec ultrices tincidunt arcu. Luctus venenatis lectus magna fringilla urna porttitor. Rhoncus dolor purus non enim praesent elementum facilisis leo vel. Vulputate dignissim suspendisse in est ante in nibh mauris cursus. Cras adipiscing enim eu turpis egestas. Duis ultricies lacus sed turpis tincidunt id aliquet. Justo laoreet sit amet cursus sit. Eget aliquet nibh praesent tristique magna sit amet purus gravida. Volutpat diam ut venenatis tellus. Neque sodales ut etiam sit amet. Vitae tortor condimentum lacinia quis vel. Congue quisque egestas diam in arcu cursus euismod quis. Turpis massa tincidunt dui ut ornare lectus sit amet est. Scelerisque mauris pellentesque pulvinar pellentesque habitant. Aliquam ut porttitor leo a. Vel turpis nunc eget lorem dolor sed.</p>
+                        <p>Sed elementum tempus egestas sed. Tincidunt praesent semper feugiat nibh sed pulvinar proin gravida hendrerit. Amet consectetur adipiscing elit duis tristique. Habitant morbi tristique senectus et netus et malesuada fames. Velit dignissim sodales ut eu sem integer vitae justo. Mi quis hendrerit dolor magna eget est. Tellus in metus vulputate eu scelerisque. Et malesuada fames ac turpis egestas maecenas pharetra. Tincidunt eget nullam non nisi est sit amet. Scelerisque eleifend donec pretium vulputate.</p>
+                        <p>At varius vel pharetra vel turpis. Sed faucibus turpis in eu. In fermentum et sollicitudin ac orci phasellus egestas tellus. Orci eu lobortis elementum nibh tellus molestie. Id nibh tortor id aliquet lectus proin. Ornare massa eget egestas purus viverra accumsan in nisl nisi. Etiam dignissim diam quis enim lobortis scelerisque fermentum dui. Morbi quis commodo odio aenean sed. Sed arcu non odio euismod lacinia at. Rhoncus mattis rhoncus urna neque viverra justo nec ultrices. Vestibulum mattis ullamcorper velit sed. Erat velit scelerisque in dictum non. Morbi leo urna molestie at.</p>
+                        <p>Dui vivamus arcu felis bibendum ut tristique. Molestie ac feugiat sed lectus vestibulum mattis ullamcorper velit sed. Nibh mauris cursus mattis molestie a iaculis at erat pellentesque. In eu mi bibendum neque egestas congue quisque egestas. Aenean euismod elementum nisi quis eleifend quam adipiscing vitae. Egestas pretium aenean pharetra magna ac placerat vestibulum lectus. Lorem mollis aliquam ut porttitor leo a diam. Mattis rhoncus urna neque viverra justo nec ultrices dui. Platea dictumst quisque sagittis purus sit amet volutpat. Congue quisque egestas diam in arcu cursus euismod quis.</p>
+                        <p>Quis vel eros donec ac odio tempor orci dapibus. Dolor sit amet consectetur adipiscing elit ut aliquam. Non blandit massa enim nec. Et tortor consequat id porta nibh venenatis cras sed. Aliquam vestibulum morbi blandit cursus risus. Lacus suspendisse faucibus interdum posuere lorem ipsum. Vestibulum sed arcu non odio. Eu nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper. Cursus euismod quis viverra nibh cras pulvinar mattis. Sit amet mauris commodo quis imperdiet. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus. Sit amet risus nullam eget felis. Nisl pretium fusce id velit ut tortor pretium viverra. Ligula ullamcorper malesuada proin libero nunc. Pellentesque habitant morbi tristique senectus. Tortor dignissim convallis aenean et tortor at risus viverra.</p>
+                    </div>
+                </div>
 
-</nav>
-<!-- Collapsible content -->
-</div>
-<!--/.Navbar-->
-	<div class="col col-xs-12 col-sm-12 col-md-12   col-lg-9 col-xl-10">
+                <!-- Optional JavaScript -->
+                <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+                <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-<h1>Swap-Book</h1>
-<!-- Search form -->
-
-  <div class="container align">
-<div class="input-group md-form form-sm form-2 pl-0">
-  <input class="form-control my-0 py-1 red-border" type="text" placeholder="Search By: ISBN, Author, Book Name" aria-label="Search">
-  <div class="input-group-append">
-    <span class="input-group-text red lighten-3" id="basic-text1"><i class="fas fa-search text-grey"
-        aria-hidden="true"></i></span>
-  </div>
-<div class="container">
-  <div class="row radio">
-    <div class="col">
-     <label class="radio-inline">
-    <input type="radio" name="survey" id="Radios2" value="No">
-    New
-  </label>
-  </div> 
-    <div class="col">
-     <label class="radio-inline">
-    <input type="radio" name="survey" id="Radios2" value="No">
-    Used
-  </label>
-  </div>  
-    <div class="col">
-     <label class="radio-inline">
-    <input type="radio" name="survey" id="Radios2" value="No">
-    E-Copy
-  </label>
-  </div>
-  </div>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam nulla facilisi cras fermentum odio eu feugiat. Interdum velit laoreet id donec ultrices tincidunt arcu. Luctus venenatis lectus magna fringilla urna porttitor. Rhoncus dolor purus non enim praesent elementum facilisis leo vel. Vulputate dignissim suspendisse in est ante in nibh mauris cursus. Cras adipiscing enim eu turpis egestas. Duis ultricies lacus sed turpis tincidunt id aliquet. Justo laoreet sit amet cursus sit. Eget aliquet nibh praesent tristique magna sit amet purus gravida. Volutpat diam ut venenatis tellus. Neque sodales ut etiam sit amet. Vitae tortor condimentum lacinia quis vel. Congue quisque egestas diam in arcu cursus euismod quis. Turpis massa tincidunt dui ut ornare lectus sit amet est. Scelerisque mauris pellentesque pulvinar pellentesque habitant. Aliquam ut porttitor leo a. Vel turpis nunc eget lorem dolor sed.</p>
-<p>Sed elementum tempus egestas sed. Tincidunt praesent semper feugiat nibh sed pulvinar proin gravida hendrerit. Amet consectetur adipiscing elit duis tristique. Habitant morbi tristique senectus et netus et malesuada fames. Velit dignissim sodales ut eu sem integer vitae justo. Mi quis hendrerit dolor magna eget est. Tellus in metus vulputate eu scelerisque. Et malesuada fames ac turpis egestas maecenas pharetra. Tincidunt eget nullam non nisi est sit amet. Scelerisque eleifend donec pretium vulputate.</p>
-<p>At varius vel pharetra vel turpis. Sed faucibus turpis in eu. In fermentum et sollicitudin ac orci phasellus egestas tellus. Orci eu lobortis elementum nibh tellus molestie. Id nibh tortor id aliquet lectus proin. Ornare massa eget egestas purus viverra accumsan in nisl nisi. Etiam dignissim diam quis enim lobortis scelerisque fermentum dui. Morbi quis commodo odio aenean sed. Sed arcu non odio euismod lacinia at. Rhoncus mattis rhoncus urna neque viverra justo nec ultrices. Vestibulum mattis ullamcorper velit sed. Erat velit scelerisque in dictum non. Morbi leo urna molestie at.</p>
-<p>Dui vivamus arcu felis bibendum ut tristique. Molestie ac feugiat sed lectus vestibulum mattis ullamcorper velit sed. Nibh mauris cursus mattis molestie a iaculis at erat pellentesque. In eu mi bibendum neque egestas congue quisque egestas. Aenean euismod elementum nisi quis eleifend quam adipiscing vitae. Egestas pretium aenean pharetra magna ac placerat vestibulum lectus. Lorem mollis aliquam ut porttitor leo a diam. Mattis rhoncus urna neque viverra justo nec ultrices dui. Platea dictumst quisque sagittis purus sit amet volutpat. Congue quisque egestas diam in arcu cursus euismod quis.</p>
-<p>Quis vel eros donec ac odio tempor orci dapibus. Dolor sit amet consectetur adipiscing elit ut aliquam. Non blandit massa enim nec. Et tortor consequat id porta nibh venenatis cras sed. Aliquam vestibulum morbi blandit cursus risus. Lacus suspendisse faucibus interdum posuere lorem ipsum. Vestibulum sed arcu non odio. Eu nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper. Cursus euismod quis viverra nibh cras pulvinar mattis. Sit amet mauris commodo quis imperdiet. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus. Sit amet risus nullam eget felis. Nisl pretium fusce id velit ut tortor pretium viverra. Ligula ullamcorper malesuada proin libero nunc. Pellentesque habitant morbi tristique senectus. Tortor dignissim convallis aenean et tortor at risus viverra.</p>
-	</div>
-		</div>
-		
- <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-</body>  
+</body>
 </html>
