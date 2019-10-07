@@ -1,4 +1,3 @@
-  
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,7 +20,7 @@
 
 <main>
     <div class="wrapper">
-       <form method="post" action="cust_insert.php" onsubmit="return validateAgreement();">
+       <form method="post" action="cust_insert.php" onsubmit="">
     <div class="container">
         <p>You must have a valid WSU email address in order to register.</p>
         <p class="instructions">Fill in the following details to register as a user:</p>
@@ -30,7 +29,7 @@
         <input type="text" placeholder="Enter First Name" name="first_name" id="first_name" required><br>
 
     <div class="clearfix">
-        <button type="submit" class="signupbtn">Sign Up</button>
+        <button type="submit" class="signupbtn" name="submit" id="submit">Sign Up</button>
     </div>
     </div>
 </form>
@@ -48,4 +47,3 @@
 </body>
 
 </html>
-
