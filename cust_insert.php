@@ -16,7 +16,7 @@
     $first_name = '';
 
     $sql = "INSERT INTO custinfo (first_name, last_name, email, pw)
-    VALUES ('$first_name', '', '','')";
+    VALUES ('$_POST[first_name]','$_POST[last_name]','$_POST[email]','$_POST[pw]')";
 
     if (mysqli_query($conn, $sql)) {
         echo "New record created successfully";
