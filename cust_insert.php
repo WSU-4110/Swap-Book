@@ -1,29 +1,30 @@
 <?php
 
-    $con = mysqli_connect('localhost','root','');
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "swapbk";
 
-    if(!$con){
-        echo 'Not Connected to Server';
+    // Create connection
+    $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+    // Check connection
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
     }
 
-    if(!mysqli_select_db('$con','sbcustomer')){
-        echo 'Database Not Selected';
+    $first_name = '';
+
+    $sql = "INSERT INTO custinfo (first_name, last_name, email, pw)
+    VALUES ('$first_name', '', '','')";
+
+    if (mysqli_query($conn, $sql)) {
+        echo "New record created successfully";
     }
 
-    $email = $_POST['email'];
-    $first_name = $_POST['first_name'];
-    $last_name = $_POST['last_name'];
-    $pw = $_POST['pw'];
-    $create_date = date('m/d/Y h:i:s a', time());
-
-    $sql = "INSERT INTO custinfo (email, first_name, last_name, pw) VALUES ('$email', '$first_name', '$last_name', '$pw')";
-
-    if(!mysqli_query($con,$sql)){
-        echo 'Not Inserted';
+    else {
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
-    else{
-        echo 'Inserted';
-    }
-    
-    header("refresh:2; url=index.html", FALSE, 307);
+
+    mysqli_close($conn);
 ?>
