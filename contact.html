@@ -21,28 +21,25 @@
 
 <main>
     <div class= "contact-form">
-<form id="contact-form" method = "post"action="">
-	<input name="name" type="text" class="form-control" placeholder= "Your Name" required><br>
-	<input email="WSUemail" type="email" class="form-control" placeholder= "Your Wayne State Email" required><br>
-	<textarea name="message" class= "form-control" placeholder="Please type your concern here..." rows="6" required></textarea><br>
-<input type="submit" class="form-control submit" value="SEND MESSAGE">
-</form>
 
 </div>
     <div class="wrapper2"><br><br>
-        <section class="instructions">...</section>
-        <form name="">
-
-        <select size="1" name="contactreason" id="contactreason" required><br>
-        <option>Please select a topic...</option>
-            <option value="ACC">Account Help</option>
-            <option value="DISP">Swap Dispute</option>
-            <option value="TECH">Technical Support</option>
-            <option value="OTHER">Other</option>
-        </select><br>
+        <section class="instructions">CONTACT US</section>
+        <form name="" id="contact-form" method = "post" action="">
+            <input name="name" type="text" placeholder="Your Name" required><br>
+            <input email="WSU Email" name="email" type="email" placeholder="Your WSU EMail" required><br>
+            <!-- <input email="WSUemail" type="email" class="form-control" placeholder= "Your Wayne State Email" required><br> -->
+            <select size="1" name="contactreason" id="contactreason" required><br>
+                <option>Please select a topic...</option>
+                <option value="ACC">Account Help</option>
+                <option value="DISP">Swap Dispute</option>
+                <option value="TECH">Technical Support</option>
+                <option value="OTHER">Other</option>
+            </select><br>
+            <textarea name="message" placeholder="Please type your concern here..." rows="6" required></textarea><br>
+            <input type="submit" class="form-control submit" value="SEND MESSAGE">
         </form>
     </div>
-    
 </main>
         
 <footer>
