@@ -1,40 +1,4 @@
 
-//(function ($, viewport) {
-
-//    // Executes only in XS breakpoint
-//    if (viewport.is('xs')) {
-//        console.log("Xtra SMall")
-//    }
-
-//    // Executes in SM, MD and LG breakpoints
-//    if (viewport.is('>=sm')) {
-//        // ...
-//    }
-
-//    // Executes in XS and SM breakpoints
-//    if (viewport.is('<md')) {
-//        // ...
-//    }
-
-//    // Execute only after document has fully loaded
-//    $(document).ready(function () {
-//        if (viewport.is('xs')) {
-//            // ...
-//        }
-//    });
-
-//    // Execute code each time window size changes
-//    $(window).resize(
-//        viewport.changed(function () {
-//            console.log("The view port is: " + viewport);
-//            if (viewport.is('xs')) {
-//                // ...
-//            }
-//        })
-//    );
-
-//});
-
 $(document).ready(function () {
     $('#MainHamMenu').on('click', function () {
         console.log("Toggle Pressed");
