@@ -8,16 +8,19 @@ body{
 }
 
 
-//comments
 
 @media (max-width: 800px) {
 
 }
 
+
+
 .mainNav{
     font-variant: small-caps;
     background-color: rgba(93, 155, 155, 1);
 }
+
+
 
 .navbar-expand-lg .mainNavBarNav {
     -webkit-box-orient: horizontal;
@@ -25,18 +28,20 @@ body{
     -ms-flex-direction: column;
     flex-direction: column;
 }
+
+
 .alwaysShowHam {
     display: block !important;
     background-color: #fff;
     color: black;
 }
 
+
 @media screen and (min-width: 1600px) {
     .li.nav-item
     {
        /* width: 100%;*/
     }
-
 
 }
 
