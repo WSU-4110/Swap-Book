@@ -256,5 +256,9 @@ error_reporting(E_ALL);
     <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
 
     <script src="scripts/main.js"></script>
+	<?php  require("includes/hideBasedOnSession.php");  ?>
+
 </body>
 </html>
+
+<?php  require("includes/endMainConnction.php");  ?>
