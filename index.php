@@ -18,9 +18,10 @@ error_reporting(E_ALL);
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main1.css">
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
-
-    <script src="https://kit.fontawesome.com/f262395e7c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+	
+	<script src="https://kit.fontawesome.com/f262395e7c.js" crossorigin="anonymous"></script>
     <title>Swap-Book</title>
 </head>
 <body>
@@ -39,20 +40,14 @@ error_reporting(E_ALL);
                     <div class="collapse navbar-collapse align-top h-100 order-lg-1" id="hamList">
 
                         <ul class="navbar-nav mr-auto mainNavBarNav align-top h-100">
-                            <li class="nav-item">
+                            <li class="nav-item leftNavItem">
                                 <a class="nav-link" id="HomeButton" href="#">Home</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="AccountButton" href="#">Account</a>
+                            <li class="nav-item leftNavItem">
+                                <a class="nav-link" id="AccountButton" href="#">About us</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item leftNavItem">
                                 <a class="nav-link" id="SwapButton" href="#">Swaps</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="SignOutButton" href="#">Sign Out</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="SignInButton" href="#">Sign In</a>
                             </li>
                         </ul>
 
@@ -62,7 +57,6 @@ error_reporting(E_ALL);
             </div>
 
 
-  
             <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-10 mh-100">
 
                 <div class="sectionTop row">
@@ -81,7 +75,7 @@ error_reporting(E_ALL);
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <a class="dropdown-item" href="#" id="UserDDRightHomeButton">Home</a>
 
-                                <a class="dropdown-item" href="#" id="UserDDRightSwapButton">Swaps</a>
+                                <a class="dropdown-item" href="#" id="UserDDRightSwapButton">Swap</a>
                                 <a class="dropdown-item" href="#" id="UserDDRightAccountButton">Account</a>
                                 <a class="dropdown-item" href="#" id="UserDDRightSignOutButton">Sign Out</a>
 								
@@ -183,6 +177,55 @@ error_reporting(E_ALL);
                             Thinking... TBA
                         </p>
                     </div>
+					 <?php if($reviewSuccesfull)
+					  {
+					  	  echo "<div class=\"row\" style=\"color: red\"><h3>Review has been send </h3></div>";
+					  } ?>
+					  <div class="row">
+
+					 
+                        <h3>Add Review</h3>
+						</div>
+						  <div class="row">
+						<form id="reviewForm" action="<?php $_PHP_SELF ?>" method = "POST">
+						 <div class="form-group">
+						  <label for="InputEmail1">Rating</label>
+						  <div id="Rating" class="form-control" >
+						  
+						<span class="fa fa-star" id="NewRatingLevel1"></span>
+						<span class="fa fa-star" id="NewRatingLevel2"></span>
+						<span class="fa fa-star" id="NewRatingLevel3" ></span>
+						<span class="fa fa-star" id="NewRatingLevel4"></span>
+						<span class="fa fa-star" id="NewRatingLevel5"></span>
+						</div>
+						 <label for="bookSelect">Book</label>
+						<select id="bookSelect" name="bookSelect" class="form-control" >
+							<?php 
+							foreach ($allBooks as $book){ 
+								echo "<option value=\"".$book["book_id"]."\" >".$book["Title"]."</option>";
+							} ?>
+						</select>
+						 <label for="userSelect" name="userSelect"></label>
+
+						 <select id="userSelect" name="userSelect" class="form-control" >
+							<?php 
+							foreach ($allUsers as $user){ 
+								echo "<option value=\"".$user["user_id"]."\" >".$user["username"]."</option>";
+							} ?>
+						</select>
+                     
+                         <label for="reviewDescription">Description</label>
+						 <textarea rows="4" cols="50" id="reviewDescription" name="reviewDescription" class="form-control" placeholder="Enter Your Text" >
+						 </textarea>
+        				<input type="hidden" id="hiddenRatingValue" name="hiddenRatingValue" />
+                        <input type="hidden" id="hiddenUserID" value="<?php echo $_SESSION["user_id"] ?>" name="hiddenUserID" />
+						  
+						<button type="submit"  id="doAddReview" name="doAddReview" value="yes" class="btn btn-primary">Send Review</button>
+					
+					</div>
+					
+					</form>
+					</div>
                 </div>
                 <div id="sectionAccount" class="h-100">
 
@@ -198,7 +241,7 @@ error_reporting(E_ALL);
                             <br>
                             Member Since: 3 years 2 months
                         </p>
-
+					
 
                     </div>
                 </div>
@@ -247,15 +290,23 @@ error_reporting(E_ALL);
             </div>
         </div>
     </div>
-    
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
-
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+ 
+	   <script type = "text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+      </script>
+	 <?php if(isset($_SESSION["lastTab"]))
+	 { ?>"
+	   <script type = "text/javascript" >
+	   var lastTab = "<?php echo $_SESSION["lastTab"] ?>";
+	   console.log("lastTab:  "+lastTab);
+	 </script>
+	 <?php } ?>
     <script src="scripts/main.js"></script>
+	<script src="scripts/newRating.js"></script>
 	<?php  require("includes/hideBasedOnSession.php");  ?>
 
 </body>
