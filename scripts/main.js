@@ -1,15 +1,40 @@
 
-$(document).ready(function () {
+$(document).ready(function() {
+
+    
     $('#MainHamMenu').on('click', function () {
         console.log("Toggle Pressed");
         $('#navCol').toggleClass('active');
         $(this).toggleClass('active');
     });
     $("#sectionAccount").hide();
-   // $("#sectionMain").hide();
     $("#sectionSwaps").hide();
     $("#sectionSignOut").hide();
     $("#sectionSignIn").hide();
+<<<<<<< HEAD
+    $("#sectionMain").hide();
+    if (lastTab === "main") {
+        $("#sectionMain").show();
+    }
+    else if (lastTab === "account") {
+        $("#sectionAccount").show();
+    }
+    else if (lastTab === "signOut") {
+        $("#sectionSignOut").show();
+    }
+    else if (lastTab === "signIn") {
+        $("#sectionSignIn").show();
+    }
+    else if (lastTab === "swaps") {
+        $("#sectionSwaps").show();
+    }
+    else {
+
+    }
+
+    console.log("lastTab: " + lastTab);
+=======
+>>>>>>> d60173acd7f766115cf5bc41383c3ed069a85924
 });
 
 $(".logoImg").click(function () {
@@ -19,10 +44,35 @@ $(".logoImg").click(function () {
     $("#SwapButton").parent().removeClass("active");
     $("#SignOutButton").parent().removeClass("active");
     $("#SignInButton").parent().removeClass("active");
+<<<<<<< HEAD
     $("#sectionAccount").slideUp();
     $("#sectionMain").slideDown();
     $("#sectionSwaps").slideUp();
     $("#sectionSignOut").slideUp();
+    $("#sectionSignIn").parent().slideUp();
+});
+
+
+$("#UserDDRightHomeButton").click(function () {
+    $("#PageTitle").html("Home");
+    $("#HomeButton").parent().addClass("active");
+    $("#AccountButton").parent().removeClass("active");
+    $("#SwapButton").parent().removeClass("active");
+    $("#SignOutButton").parent().removeClass("active");
+    $("#SignInButton").parent().removeClass("active");
+=======
+>>>>>>> d60173acd7f766115cf5bc41383c3ed069a85924
+    $("#sectionAccount").slideUp();
+    $("#sectionMain").slideDown();
+    $("#sectionSwaps").slideUp();
+    $("#sectionSignOut").slideUp();
+<<<<<<< HEAD
+    $("#sectionSignIn").slideUp();
+
+});
+
+
+=======
     $("#sectionSignIn").parent().slideUp();
 });
 
@@ -43,6 +93,7 @@ $("#UserDDRightHomeButton").click(function () {
 });
 
 
+>>>>>>> d60173acd7f766115cf5bc41383c3ed069a85924
 $("#UserDDRightAccountButton").click(function () {
     $("#PageTitle").html("Account");
     $("#HomeButton").parent().removeClass("active");
@@ -165,6 +216,7 @@ $("#SignOutButton").click(function () {
     $("#sectionSwaps").slideUp();
     $("#sectionSignOut").slideDown();
     $("#sectionSignIn").slideUp();
+<<<<<<< HEAD
 });
 
 
@@ -184,6 +236,27 @@ $("#SignInButton").click(function () {
 });
 
 
+=======
+});
+
+
+$("#SignInButton").click(function () {
+    $("#PageTitle").html("Sign In");
+    $("#HomeButton").parent().removeClass("active");
+    $("#AccountButton").parent().removeClass("active");
+    $("#SwapButton").parent().removeClass("active");
+    $("#SignOutButton").parent().removeClass("active");
+    $("#SignInButton").parent().addClass("active");
+    $("#sectionAccount").slideUp();
+    $("#sectionMain").slideUp();
+    $("#sectionSwaps").slideUp();
+    $("#sectionSignOut").slideUp();
+    $("#sectionSignIn").slideDown();
+    console.log("what the fuck???");
+});
+
+
+>>>>>>> d60173acd7f766115cf5bc41383c3ed069a85924
 
 /* comment this out to do mail to */
 //$("#emailForm").on("submit", function () {
