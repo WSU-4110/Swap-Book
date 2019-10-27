@@ -7,15 +7,14 @@ body{
 	color: #111111;
 }
 
-
-
-@media (max-width: 800px) {
+.StarChecked
+{
+    color: aqua;
 
 }
 
 
-
-.mainNav{
+.mainNav {
     font-variant: small-caps;
     background-color: rgba(93, 155, 155, 1);
 }
@@ -38,9 +37,11 @@ body{
 
 
 @media screen and (min-width: 1600px) {
-    .li.nav-item
-    {
-       /* width: 100%;*/
+    .mainNavBarNav {
+        -ms-flex-direction: column !important;
+        flex-direction: column !important;
+        font-size: 2em;
+        /*width: 100%;*/
     }
 
 }
@@ -59,6 +60,12 @@ body{
             margin-left: 0;
             transform: none;
         }
+
+
+
+    .leftNavItem {
+        display: block !important;
+    }
 }
 
 
