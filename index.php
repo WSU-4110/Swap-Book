@@ -5,22 +5,18 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 	require("includes/session.php");  ?>
 	
-
 	<?php  require("includes/mainConnection.php");  ?>
 		<?php  require("includes/logIn.php");  ?>
 
 <!doctype html>
 <html lang="en">
 <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main1.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     
-	
 	<script src="https://kit.fontawesome.com/f262395e7c.js" crossorigin="anonymous"></script>
     <title>Swap-Book</title>
 </head>
@@ -29,7 +25,6 @@ error_reporting(E_ALL);
         <div class="row h-100">
             <div class="col col-12 col-xs-12 col-sm-12 col-md-12  col-lg-3  col-xl-2" id="navCol">
                 <nav class="navbar navbar-light purple lighten-4 mb-3 navbar-inverse navbar-expand-lg navbar-expand-xl mainNav h-100 align-items-start">
-
 
                     <button class="navbar-toggler alwaysShowHam purple darken-3 order-lg-2 align-top" type="button" data-toggle="collapse"
                             data-target="#hamList" id="MainHamMenu" aria-controls="navbarSupportedContent41" aria-expanded="false"
@@ -55,7 +50,6 @@ error_reporting(E_ALL);
 
                 </nav>
             </div>
-
 
             <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-10 mh-100">
 
@@ -86,7 +80,6 @@ error_reporting(E_ALL);
 
                 </div>
 
-
                 <div id="sectionMain" class="h-100">
 				   <form id="searchForm" action="<?php $_PHP_SELF ?>" method = "POST">
 						<div class="sectionTop row">
@@ -98,9 +91,6 @@ error_reporting(E_ALL);
 									<button type="submit"  id="doSearch" name="doSearch" value="yes" class="btn btn-primary"><i class="fas fa-search text-grey"
 										   aria-hidden="true"></i></button>
 
-								
-
-										
 									</span>
 								</div>
 							</div>
@@ -136,16 +126,12 @@ error_reporting(E_ALL);
 					if(isset($SearchResult))
 					{
 						if ($SearchResult->num_rows > 0) {
-							// output data of each row
-							//int found = false;
 							
 							while($row = $SearchResult->fetch_assoc()) {
 								echo "<tr>";
 								echo "<td>" . $row["book_id"]. "</td><td>" . $row["type"]. "</td><td>" . $row["Title"]."</td><td>". $row["Author"].  "</td>";
-							
 								echo "</tr>";
 							}
-
 						} 
 						else {
 							echo "no records";
@@ -183,7 +169,6 @@ error_reporting(E_ALL);
 					  } ?>
 					  <div class="row">
 
-					 
                         <h3>Add Review</h3>
 						</div>
 						  <div class="row">
@@ -221,7 +206,6 @@ error_reporting(E_ALL);
                         <input type="hidden" id="hiddenUserID" value="<?php echo $_SESSION["user_id"] ?>" name="hiddenUserID" />
 						  
 						<button type="submit"  id="doAddReview" name="doAddReview" value="yes" class="btn btn-primary">Submit Review</button>
-					
 					</div>
 					
 					</form>
@@ -241,15 +225,12 @@ error_reporting(E_ALL);
                             <br>
                             Member Since: 3 years 2 months
                         </p>
-					
-
                     </div>
                 </div>
 				   <div id="sectionSignIn" class="h-100">
                     <div class="row">
                         <p>You are Signed Out</p>
                     </div>
-
                     <div class="sectionTop row">
                         <h2>Sign In</h2>
                     </div>
@@ -263,17 +244,13 @@ error_reporting(E_ALL);
 								<input type="Password" id="InputPassword1" name="InputPassword1" />
                                 <small id="emailHelp" class="form-text text-muted"></small>
                             </div>
-
                             <button type="submit" class="btn btn-primary">Sign In</button>
-
                         </form>
                     </div>
 					<?php 
 					if($LogInFailed )
 					{
-					
 						echo "<p>Invalid username or password</p>";
-						
 					}
 					?>
                 </div>
@@ -284,13 +261,10 @@ error_reporting(E_ALL);
 
                         </form>
                     </div>
-                   
                 </div>
-
             </div>
         </div>
     </div>
-
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
