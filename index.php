@@ -220,7 +220,7 @@ error_reporting(E_ALL);
         				<input type="hidden" id="hiddenRatingValue" name="hiddenRatingValue" />
                         <input type="hidden" id="hiddenUserID" value="<?php echo $_SESSION["user_id"] ?>" name="hiddenUserID" />
 						  
-						<button type="submit"  id="doAddReview" name="doAddReview" value="yes" class="btn btn-primary">Send Review</button>
+						<button type="submit"  id="doAddReview" name="doAddReview" value="yes" class="btn btn-primary">Submit Review</button>
 					
 					</div>
 					
