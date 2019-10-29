@@ -1,7 +1,6 @@
 
 $(document).ready(function() {
 
-    
     $('#MainHamMenu').on('click', function () {
         console.log("Toggle Pressed");
         $('#navCol').toggleClass('active');
@@ -52,7 +51,6 @@ $(".logoImg").click(function () {
     $("#sectionSignIn").parent().slideUp();
 });
 
-
 $("#UserDDRightHomeButton").click(function () {
     $("#PageTitle").html("Home");
     $("#HomeButton").parent().addClass("active");
@@ -68,14 +66,10 @@ $("#UserDDRightHomeButton").click(function () {
     $("#sectionSignOut").slideUp();
 <<<<<<< HEAD
     $("#sectionSignIn").slideUp();
-
 });
-
-
 =======
     $("#sectionSignIn").parent().slideUp();
 });
-
 
 $("#UserDDRightHomeButton").click(function () {
     $("#PageTitle").html("Home");
@@ -92,7 +86,6 @@ $("#UserDDRightHomeButton").click(function () {
 
 });
 
-
 >>>>>>> d60173acd7f766115cf5bc41383c3ed069a85924
 $("#UserDDRightAccountButton").click(function () {
     $("#PageTitle").html("Account");
@@ -100,7 +93,6 @@ $("#UserDDRightAccountButton").click(function () {
     $("#AccountButton").parent().addClass("active");
     $("#SwapButton").parent().removeClass("active");
     $("#SignOutButton").parent().removeClass("active");
-
     $("#SignInButton").parent().removeClass("active");
     $("#sectionAccount").slideDown();
     $("#sectionMain").slideUp();
@@ -139,7 +131,6 @@ $("#UserDDRightSignOutButton").click(function () {
     $("#sectionSignIn").slideUp();
 });
 
-
 $("#UserDDRightSignInButton").click(function () {
     $("#PageTitle").html("Sign In");
     $("#HomeButton").parent().removeClass("active");
@@ -154,11 +145,7 @@ $("#UserDDRightSignInButton").click(function () {
     $("#sectionSignIn").slideDown();
 });
 
-
-
-
 $("#HomeButton").click(function () {
-
     $("#PageTitle").html("Home");
     $("#HomeButton").parent().addClass("active");
     $("#AccountButton").parent().removeClass("active");
@@ -170,9 +157,7 @@ $("#HomeButton").click(function () {
     $("#sectionSwaps").slideUp();
     $("#sectionSignOut").slideUp();
     $("#sectionSignIn").slideUp();
-
 });
-
 
 $("#AccountButton").click(function () {
     $("#PageTitle").html("Account");
@@ -187,8 +172,6 @@ $("#AccountButton").click(function () {
     $("#sectionSignOut").slideUp();
     $("#sectionSignIn").slideUp();
 });
-
-
 
 $("#SwapButton").click(function () {
     $("#PageTitle").html("Swap");
@@ -219,7 +202,6 @@ $("#SignOutButton").click(function () {
 <<<<<<< HEAD
 });
 
-
 $("#SignInButton").click(function () {
     $("#PageTitle").html("Sign In");
     $("#HomeButton").parent().removeClass("active");
@@ -234,12 +216,10 @@ $("#SignInButton").click(function () {
     $("#sectionSignIn").slideDown();
     console.log("what the fuck???");
 });
-
 
 =======
 });
 
-
 $("#SignInButton").click(function () {
     $("#PageTitle").html("Sign In");
     $("#HomeButton").parent().removeClass("active");
@@ -254,7 +234,6 @@ $("#SignInButton").click(function () {
     $("#sectionSignIn").slideDown();
     console.log("what the fuck???");
 });
-
 
 >>>>>>> d60173acd7f766115cf5bc41383c3ed069a85924
 
@@ -267,7 +246,6 @@ function checkWayneEmail(email) {
     var valid = email.endsWith("@wayne.edu");
     if (!valid) {
         $("#emailHelp").html("Must enter a wayne.edu email address")
-
     }
     else {
         $("#HomeButton").parent().addClass("active");
