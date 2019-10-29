@@ -1,10 +1,3 @@
 <?php
-
-
-
-
-
-
 //$mainConnection->close();
-
 ?>
