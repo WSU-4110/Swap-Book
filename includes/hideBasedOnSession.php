@@ -1,7 +1,5 @@
 <script>
-
 <?php
-
 
 if($_SESSION["loggedIn"] == true)
 {
@@ -17,7 +15,6 @@ echo '$("#UserDDRightSignOutButton").hide();'."\n";
 echo '$("#SignInButton").parent().show();'."\n";
 echo '$("#UserDDRightSignInButton").show();'."\n";
 }
-
 
 ?>
 </script>
