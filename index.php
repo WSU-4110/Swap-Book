@@ -70,6 +70,7 @@ error_reporting(E_ALL);
                                 <a class="dropdown-item" href="#" id="UserDDRightHomeButton">Home</a>
 
                                 <a class="dropdown-item" href="#" id="UserDDRightSwapButton">Swap</a>
+                                <a class="dropdown-item" href="#" id="UserDDRightAddBook">AddBook</a>
                                 <a class="dropdown-item" href="#" id="UserDDRightAccountButton">Account</a>
                                 <a class="dropdown-item" href="#" id="UserDDRightSignOutButton">Sign Out</a>
 								
