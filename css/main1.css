@@ -13,13 +13,10 @@ body{
 
 }
 
-
 .mainNav {
     font-variant: small-caps;
     background-color: rgba(93, 155, 155, 1);
 }
-
-
 
 .navbar-expand-lg .mainNavBarNav {
     -webkit-box-orient: horizontal;
@@ -28,13 +25,11 @@ body{
     flex-direction: column;
 }
 
-
 .alwaysShowHam {
     display: block !important;
     background-color: #fff;
     color: black;
 }
-
 
 @media screen and (min-width: 1600px) {
     .mainNavBarNav {
@@ -43,11 +38,7 @@ body{
         font-size: 2em;
         /*width: 100%;*/
     }
-
 }
-
-
-
 
 @media (min-width: 992px) 
 {
@@ -55,17 +46,12 @@ body{
         margin-left: -160px;
         transition: all 0.6s cubic-bezier(0.945, 0.020, 0.270, 0.665);
     }
-
         #navCol.active {
             margin-left: 0;
             transform: none;
         }
 
-
-
     .leftNavItem {
         display: block !important;
     }
 }
-
-
