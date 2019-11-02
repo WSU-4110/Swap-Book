@@ -232,15 +232,11 @@ $("#SignInButton").click(function () {
     $("#sectionSwaps").slideUp();
     $("#sectionSignOut").slideUp();
     $("#sectionSignIn").slideDown();
-    console.log("what the fuck???");
+    console.log("what the blank??");
 });
 
 >>>>>>> d60173acd7f766115cf5bc41383c3ed069a85924
 
-/* comment this out to do mail to */
-//$("#emailForm").on("submit", function () {
-//    return  checkWayneEmail($("#InputEmail1").val());
-//})
 
 function checkWayneEmail(email) {
     var valid = email.endsWith("@wayne.edu");
