@@ -1,11 +1,12 @@
-﻿<?php
-ini_set('display_errors', 1);
+﻿
+	<?php 
+	ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-require("includes/session.php");  ?>
+	require("includes/session.php");  ?>
 	
-<?php  require("includes/mainConnection.php");  ?>
-<?php  require("includes/logIn.php");  ?>
+	<?php  require("includes/mainConnection.php");  ?>
+		<?php  require("includes/logIn.php");  ?>
 
 <!doctype html>
 <html lang="en">
@@ -14,57 +15,66 @@ require("includes/session.php");  ?>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main1.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
 	<script src="https://kit.fontawesome.com/f262395e7c.js" crossorigin="anonymous"></script>
     <title>Swap Book :: Textbook Trades for WSU Students</title>
 </head>
-    
 <body>
     <div id="wrapper">
         <div class="row h-100">
             <div class="col col-12 col-xs-12 col-sm-12 col-md-12  col-lg-3  col-xl-2" id="navCol">
                 <nav class="navbar navbar-light purple lighten-4 mb-3 navbar-inverse navbar-expand-lg navbar-expand-xl mainNav h-100 align-items-start">
+
                     <button class="navbar-toggler alwaysShowHam purple darken-3 order-lg-2 align-top" type="button" data-toggle="collapse"
                             data-target="#hamList" id="MainHamMenu" aria-controls="navbarSupportedContent41" aria-expanded="false"
                             aria-label="Toggle navigation">
                         <span class="white-text"><i class="fas fa-bars fa-1x"></i></span>
                     </button>
+
                     <div class="collapse navbar-collapse align-top h-100 order-lg-1" style="color: #31708e" id="hamList">
+
                         <ul class="navbar-nav mr-auto mainNavBarNav align-top h-100">
                             <li class="nav-item leftNavItem">
-                                <a class="nav-link" id="HomeButton" href="index.php">Find a Book</a>
+                                <a class="nav-link" id="HomeButton" href="#">Home</a>
                             </li>
                             <li class="nav-item leftNavItem">
-                                <a class="nav-link" id="AccountButton" href="#">About Us</a>
+                                <a class="nav-link" id="AccountButton" href="#">About us</a>
                             </li>
                             <li class="nav-item leftNavItem">
-                                <a class="nav-link" id="SwapButton" href="contact.html">Help</a>
+                                <a class="nav-link" id="SwapButton" href="#">Swaps</a>
                             </li>
                         </ul>
+
                     </div>
+
                 </nav>
             </div>
-            
+
             <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-10 mh-100">
+
                 <div class="sectionTop row">
                     <div class="col col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9 ">
+
                         <h1 class="float-left img-fluid" id="PageTitle">Swap Book</h1>
-                        <img src="images/logo.png" class="float-right logoImg " alt="Home" />
+                        <img src="images/logo_xsmall.png" class="float-right logoImg " alt="Home" />
+
                     </div>
-                    
                     <div class="col col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 ">
                         <div class="dropdown float-right">
+
                             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <img src="images/userImage.png" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <!--<a class="dropdown-item" href="index.php" id="UserDDRightHomeButton">Home</a>-->
-                                <a class="dropdown-item" href="#" id="UserDDRightSwapButton">Swap History</a>
-                                <a class="dropdown-item" href="#" id="UserDDRightAddBook">Add a Book</a>
-                                <a class="dropdown-item" href="account.html" id="UserDDRightAccountButton">Account Settings</a>
+                                <a class="dropdown-item" href="#" id="UserDDRightHomeButton">Home</a>
+
+                                <a class="dropdown-item" href="#" id="UserDDRightSwapButton">Swap</a>
+                                <a class="dropdown-item" href="#" id="UserDDRightAddBook">AddBook</a>
+                                <a class="dropdown-item" href="#" id="UserDDRightAccountButton">Account</a>
                                 <a class="dropdown-item" href="#" id="UserDDRightSignOutButton">Sign Out</a>
 								
-                                <!--<a class="dropdown-item" href="#" id="UserDDRightSignInButton">Sign In</a>-->
+                                <a class="dropdown-item" href="#" id="UserDDRightSignInButton">Sign In</a>
                             </div>
                         </div>
                     </div>
