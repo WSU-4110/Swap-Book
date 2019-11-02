@@ -18,7 +18,7 @@ error_reporting(E_ALL);
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     
 	<script src="https://kit.fontawesome.com/f262395e7c.js" crossorigin="anonymous"></script>
-    <title>Swap Book :: Textbook Trades for WSU Students</title>
+    <title>Swap-Book</title>
 </head>
 <body>
     <div id="wrapper">
@@ -32,7 +32,7 @@ error_reporting(E_ALL);
                         <span class="white-text"><i class="fas fa-bars fa-1x"></i></span>
                     </button>
 
-                    <div class="collapse navbar-collapse align-top h-100 order-lg-1" style="color: #31708e" id="hamList">
+                    <div class="collapse navbar-collapse align-top h-100 order-lg-1" id="hamList">
 
                         <ul class="navbar-nav mr-auto mainNavBarNav align-top h-100">
                             <li class="nav-item leftNavItem">
