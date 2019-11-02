@@ -173,16 +173,16 @@ $("#AccountButton").click(function () {
     $("#sectionSignIn").slideUp();
 });
 
-$("#SwapButton").click(function () {
-    $("#PageTitle").html("Swap");
+$("#ContactUs").click(function () {
+    $("#PageTitle").html("Contact Us");
     $("#HomeButton").parent().removeClass("active");
     $("#AccountButton").parent().removeClass("active");
-    $("#SwapButton").parent().addClass("active");
+    $("#ContactUs").parent().addClass("active");
     $("#SignOutButton").parent().removeClass("active");
     $("#SignInButton").parent().removeClass("active");
     $("#sectionAccount").slideUp();
     $("#sectionMain").slideUp();
-    $("#sectionSwaps").slideDown();
+    $("#sectionContactUs").slideDown();
     $("#sectionSignOut").slideUp();
     $("#sectionSignIn").slideUp();
 });
