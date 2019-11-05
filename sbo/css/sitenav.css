@@ -6,9 +6,17 @@
   background-color: #687864;
   position: fixed;
   top: 0px;
-  width: 300px;
-  height: 100%;
+  max-width: 25vw;
+  height: 100vh;
   color: #e1ffff;
+  min-height: 100vh;
+  margin-left: 0px;
+  -webkit-transition: margin .25s ease-out;
+  -moz-transition: margin .25s ease-out;
+  -o-transition: margin .25s ease-out;
+  transition: margin .25s ease-out;
+  padding-left: 0px;
+    
 }
 .nav-side-menu .brand {
   background-color: #687864;
@@ -144,5 +152,6 @@
 }
 body {
   margin: 0px;
+  margin-left: -15rem;
   padding: 0px;
 }
