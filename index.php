@@ -21,7 +21,9 @@ error_reporting(E_ALL);
     <title>Swap-Book</title>
 </head>
 <body>	
-			<?php
+		// Assignment 5 code 
+		
+		<?php
 				Class NavMenu
 				{
 					public $var1 = 'Home';
