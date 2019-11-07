@@ -77,7 +77,7 @@ error_reporting(E_ALL);
                     </div>
 
                 </div>
-
+				//decorator design applied
                 <?php 
 				     class searchBox 
 					 {
