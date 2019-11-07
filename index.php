@@ -78,14 +78,33 @@ error_reporting(E_ALL);
 
                 </div>
 
-                <div id="sectionMain" class="h-100">
-				   <form id="searchForm" action="<?php $_PHP_SELF ?>" method = "POST">
-						<div class="sectionTop row">
-							<div class="input-group md-form form-sm form-2 pl-0">
-								<input class="form-control my-0 py-1 red-border" type="text" name="searchText" id="searchText" placeholder="Search" aria-label="Search">
-								<div class="input-group-append">
-									<span class="input-group-text red lighten-3" id="basic-text1">
-									
+                <?php 
+				     class searchBox 
+					 {
+						 private $var1 = 'searchForm';
+						 private $var2 = 'searchText';
+						 public $var3 = 'searchbox';
+
+						 public function post(){
+							echo $this -> var; 
+						}
+					 }
+
+					 class sectionTop extends searchBox{
+					     public $a = 'move';
+						 public $b = 'back';
+					     public function input()
+						  {
+						  	  searchBox = post();
+						  }
+					 	 if (isset($this)){
+                         echo get_class($this);
+						 }
+						 else
+						 echo "not available";
+					 }
+				?>
+
 									<button type="submit"  id="doSearch" name="doSearch" value="yes" class="btn btn-primary"><i class="fas fa-search text-grey"
 										   aria-hidden="true"></i></button>
 
