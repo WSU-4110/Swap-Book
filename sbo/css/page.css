@@ -1,0 +1,15 @@
+body {
+  overflow-x: hidden;
+}
+
+#page-content-wrapper {
+  min-width: 75vw;
+  max-width: 75vw;
+  margin-left: 25vw;
+}
+
+@media (min-width: 768px) {
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
