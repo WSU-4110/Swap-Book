@@ -194,27 +194,18 @@ error_reporting(E_ALL);
 						</p>
                     </div>
 				  </div>
+				  
+                    <div id="sectionRegister" class="h-100">
+						<iframe src="register.html" style="border: 0px;"  height="1100" width="100%"></iframe>
+				   </div>
+				  <div id="sectionContactUs" class="h-100">
                     <div class="row">
-                        <p>
-                            Welcome to Swap-Book.
-                            <br>
-                            <br>
-
-<?php echo "hello world"; ?>
-                            <br>
-                            A site which will help you to give back to the Wayne State Community!
-                        </p>
+					<iframe src="contact.html" style="border: 0px;"  height="1100" width="100%"></iframe>
                     </div>
-                </div>
+				  </div>
                 <div id="sectionSwaps" class="h-100">
                     <div class="row">
-                        <p>
-                            Filter Swaps: Last 30 days, Last six months, 2019, 2018, 2017
-                            <br>
-                            <br>
-                            <br>
-                            Thinking... TBA
-                        </p>
+                        
                     </div>
 					 <?php if($reviewSuccesfull)
 					  {
