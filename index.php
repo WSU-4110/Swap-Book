@@ -173,6 +173,19 @@ error_reporting(E_ALL);
 						</table>
 						</div>
 					</div>
+<div id="sectionAboutUs" class="h-100">
+                    <div class="row">
+                        <p>
+						Swap Book website is for Wayne State University students to swap textbooks. This site allows students to list textbooks they no longer need to swap for textbooks they will need. The system will maintain a database of textbooks based on student listings, provide search functionality, have secure login, and be mobile responsive.
+						</p>
+						<p>
+						This site is free for all members (Wayne State students & faculties ONLY)
+						</p>
+						<p>
+						Privacy Policy: You must use a "wayne.edu" email to sign up for this site. You must be a member of the Swap book in order to search for the book you are looking for. Swap Book will keep your personal information private and protected from others.
+						</p>
+                    </div>
+				  </div>
                     <div class="row">
                         <p>
                             Welcome to Swap-Book.
