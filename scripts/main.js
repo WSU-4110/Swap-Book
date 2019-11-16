@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
 
     $('#MainHamMenu').on('click', function () {
@@ -10,30 +9,53 @@ $(document).ready(function() {
     $("#sectionSwaps").hide();
     $("#sectionSignOut").hide();
     $("#sectionSignIn").hide();
-<<<<<<< HEAD
     $("#sectionMain").hide();
-    if (lastTab === "main") {
+    $("#sectionAboutUs").hide();
+    $("#sectionContactUs").hide();
+    if (lastTab === "main" || lastTab === "home") {
+        $("#PageTitle").html("Home");
         $("#sectionMain").show();
     }
+    else if (lastTab === "contactus") {
+        $("#PageTitle").html("Contact Us");
+        $("#sectionContactUs").show();
+    }
+    else if (lastTab === "aboutus") {
+        $("#PageTitle").html("About Us");
+        $("#sectionAboutUs").show();
+    }
     else if (lastTab === "account") {
+        $("#PageTitle").html("Account");
         $("#sectionAccount").show();
     }
     else if (lastTab === "signOut") {
+
+        $("#PageTitle").html("Sign Out");
         $("#sectionSignOut").show();
     }
     else if (lastTab === "signIn") {
+
+        $("#PageTitle").html("Sign In");
         $("#sectionSignIn").show();
     }
     else if (lastTab === "swaps") {
+
+        $("#PageTitle").html("User Review");
         $("#sectionSwaps").show();
     }
     else {
 
     }
 
+    if (!signedIn) {
+        $("#AccountButton").hide();
+        $("#SwapButton").hide();
+        $("#UserDDRightSwapButton").hide();
+        $("#UserDDRightAccountButton").hide();
+        $("#RegisterButton").show();
+    }
+
     console.log("lastTab: " + lastTab);
-=======
->>>>>>> d60173acd7f766115cf5bc41383c3ed069a85924
 });
 
 $(".logoImg").click(function () {
