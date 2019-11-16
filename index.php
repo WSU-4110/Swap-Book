@@ -231,7 +231,10 @@ error_reporting(E_ALL);
 						<select id="bookSelect" name="bookSelect" class="form-control" >
 							<?php 
 							foreach ($allBooks as $book){ 
+							   if(isset($book["book_id"]))
+							   {
 								echo "<option value=\"".$book["book_id"]."\" >".$book["Title"]."</option>";
+								}
 							} ?>
 						</select>
 						 <label for="userSelect" name="userSelect"></label>
@@ -247,7 +250,7 @@ error_reporting(E_ALL);
 						 <textarea rows="4" cols="50" id="reviewDescription" name="reviewDescription" class="form-control" placeholder="Enter Your Text" >
 						 </textarea>
         				<input type="hidden" id="hiddenRatingValue" name="hiddenRatingValue" />
-                        <input type="hidden" id="hiddenUserID" value="<?php echo $_SESSION["user_id"] ?>" name="hiddenUserID" />
+                        <input type="hidden" id="hiddenUserID" value='<?php echo $_SESSION["user_id"] ?>' name="hiddenUserID" />
 						  
 						<button type="submit"  id="doAddReview" name="doAddReview" value="yes" class="btn btn-primary">Submit Review</button>
 					</div>
@@ -255,7 +258,6 @@ error_reporting(E_ALL);
 					</form>
 					</div>
                 </div>
-
 
 				<div id="sectionAccount" class="h-100">
 
