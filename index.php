@@ -149,6 +149,7 @@ error_reporting(E_ALL);
 							</div>
 						</div>
 					</form>
+					</form>
 					<div class="row">
 					<div class="row">
 					<table>
