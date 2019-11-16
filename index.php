@@ -8,6 +8,7 @@ error_reporting(E_ALL);
 	<?php  require("includes/mainConnection.php");  ?>
 		<?php  require("includes/logIn.php");  ?>
 
+		
 <!doctype html>
 <html lang="en">
 <head>
@@ -59,7 +60,7 @@ error_reporting(E_ALL);
                 </nav>
             </div>
 
-             <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-10 mh-100">
+            <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-10 mh-100">
 
                 <div class="sectionTop row">
                     <div class="col col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9 ">
@@ -86,7 +87,7 @@ error_reporting(E_ALL);
 
                 </div>
 
-               <div id="sectionMain" class="h-100">
+                <div id="sectionMain" class="h-100">
 				<?php if(isset(  $_SESSION["loggedIn"]) && $_SESSION["loggedIn"] == true  )
 				{
 				?>
@@ -129,39 +130,18 @@ error_reporting(E_ALL);
 						</div>
 					</form>
 			
-
-									<button type="submit"  id="doSearch" name="doSearch" value="yes" class="btn btn-primary"><i class="fas fa-search text-grey"
-										   aria-hidden="true"></i></button>
-									</span>
-								</div>
-							</div>
-						</div>
-						<div class="row radio">
-							<div class="col">
-								<label class="radio-inline">
-									<input type="radio" name="type" id="Radios1" value="1">
-									New
-								</label>
-							</div>
-							<div class="col">
-								<label class="radio-inline">
-									<input type="radio" name="type" id="Radios2" value="2">
-									Used
-								</label>
-							</div>
-							<div class="col">
-								<label class="radio-inline">
-									<input type="radio" name="type" id="Radios3" value="3">
-									E-Copy
-								</label>
-							</div>
-						</div>
-					</form>
-					</form>
 					<div class="row">
-					<div class="row">
-					<table>
-						
+					
+					<?php
+					if(isset($SearchResult))
+					{ ?>
+					<table class="SearchResultTable table table-light table-bordered table-striped">
+					<thead>
+						<tr>
+							<th  scope="col" style="display: none">ID</th><th  scope="col">Type</th><th  scope="col">Title</th><th scope="col">Author</th><th scope="col">Edition</th><th scope="col">Year</th><th scope="col">Condition</th>
+						</tr>
+					</thead>
+					 <tbody>
 					<?php
 					if(isset($SearchResult))
 					{
@@ -169,7 +149,14 @@ error_reporting(E_ALL);
 							
 							while($row = $SearchResult->fetch_assoc()) {
 								echo "<tr>";
-								echo "<td>" . $row["book_id"]. "</td><td>" . $row["type"]. "</td><td>" . $row["Title"]."</td><td>". $row["Author"].  "</td>";
+								$typeText = "None";
+								if ($row["type"] == "1")
+									$typeText = "New";
+								else if ($row["type"] == "2")
+									$typeText = "Used";
+								else if ($row["type"] == "2")
+									$typeText = "E-Copy";
+								echo '<td style="display: none">' . $row["book_id"]. "</td><td>" .$typeText. "</td><td>" . $row["Title"]."</td><td>". $row["Author"]."</td><td>". $row["edition"]."</td><td>". $row["year"]."</td><td>". $row["condition"].  "</td>";
 								echo "</tr>";
 							}
 						} 
@@ -178,10 +165,16 @@ error_reporting(E_ALL);
 						}
 					}
 						?>
+						</tbody>
 						</table>
+
+						<?php
+					} ?>
 						</div>
+						<?php } ?>
 					</div>
-<div id="sectionAboutUs" class="h-100">
+       
+				  <div id="sectionAboutUs" class="h-100">
                     <div class="row">
                         <p>
 						Swap Book website is for Wayne State University students to swap textbooks. This site allows students to list textbooks they no longer need to swap for textbooks they will need. The system will maintain a database of textbooks based on student listings, provide search functionality, have secure login, and be mobile responsive.
@@ -194,8 +187,7 @@ error_reporting(E_ALL);
 						</p>
                     </div>
 				  </div>
-				  
-                    <div id="sectionRegister" class="h-100">
+				   <div id="sectionRegister" class="h-100">
 						<iframe src="register.html" style="border: 0px;"  height="1100" width="100%"></iframe>
 				   </div>
 				  <div id="sectionContactUs" class="h-100">
@@ -258,8 +250,8 @@ error_reporting(E_ALL);
 					</form>
 					</div>
                 </div>
-
-				<div id="sectionAccount" class="h-100">
+				
+                <div id="sectionAccount" class="h-100">
 
                     <div class="row">
 						<!--change account page  here -->
@@ -312,6 +304,7 @@ error_reporting(E_ALL);
 					<a href="#"><img src="images/social/pin.png"  class="socialIcon"></a>
 					<a href="#"><img src="images/social/yt.png"  class="socialIcon"></a>
 				</div>
+ 
     </div>
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -335,14 +328,7 @@ error_reporting(E_ALL);
 	var signedIn = false;
 	<?php  } ?>
 
-
-
-
-
 	   console.log("lastTab:  "+lastTab);
-
-
-
 
 	 </script>
 	 <?php } ?>
