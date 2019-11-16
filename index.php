@@ -88,12 +88,10 @@ error_reporting(E_ALL);
 									
 									<button type="submit"  id="doSearch" name="doSearch" value="yes" class="btn btn-primary"><i class="fas fa-search text-grey"
 										   aria-hidden="true"></i></button>
-
 									</span>
 								</div>
 							</div>
 						</div>
-
 						<div class="row radio">
 							<div class="col">
 								<label class="radio-inline">
@@ -115,7 +113,6 @@ error_reporting(E_ALL);
 							</div>
 						</div>
 					</form>
-				
 					<div class="row">
 					<div class="row">
 					<table>
