@@ -20,44 +20,44 @@ error_reporting(E_ALL);
 	<script src="https://kit.fontawesome.com/f262395e7c.js" crossorigin="anonymous"></script>
     <title>Swap-Book</title>
 </head>
-<body>	
-		// Assignment 5 code 
-		
-		<?php
-				Class NavMenu
-				{
-					public $var1 = 'Home';
-					public $var2 = 'About_Us';
-					public $var3 = 'Contact_Us';
+<body>
+    <div id="wrapper">
+        <div class="row h-100">
+            <div class="col col-12 col-xs-12 col-sm-12 col-md-12  col-lg-3  col-xl-2" id="navCol">
+                <nav class="navbar navbar-light purple lighten-4 mb-3 navbar-inverse navbar-expand-lg navbar-expand-xl mainNav h-100 align-items-start">
 
-					
-					public function displayvar1()
-					{
-						echo $this->var1;
-					}
+                    <button class="navbar-toggler alwaysShowHam purple darken-3 order-lg-2 align-top" type="button" data-toggle="collapse"
+                            data-target="#hamList" id="MainHamMenu" aria-controls="navbarSupportedContent41" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                        <span class="white-text"><i class="fas fa-bars fa-1x"></i></span>
+                    </button>
 
-					public function displayvar2()
-					{
-						echo $this->var2;
-					}
+                    <div class="collapse navbar-collapse align-top h-100 order-lg-1" id="hamList">
 
-					public function displayvar3()
-					{
-						echo $this->var3;
-					}
-				}
+                        <ul class="navbar-nav mr-auto mainNavBarNav align-top h-100">
+                            <li class="nav-item leftNavItem">
+                                <a class="nav-link" id="HomeButton" href="#">Home</a>
+                            </li>
+                            <li class="nav-item leftNavItem">
+                                <a class="nav-link" id="AboutUsButton" href="#">About us</a>
+                            </li>
+                            <li class="nav-item leftNavItem">
+                                <a class="nav-link" id="ContactUs" href="#">Contact Us</a>
+                            </li>
+							<?php if(!isset(  $_SESSION["loggedIn"]) ||  ( isset(  $_SESSION["loggedIn"]) && $_SESSION["loggedIn"] == false  ))
+							{
+							?>
+								<li class="nav-item leftNavItem">
+									<a class="nav-link" id="RegisterButton" href="#">Register</a>
+								</li>
+							<?php } ?>
 
-				class NavMenuButtons extends NavMenu
-				{
-				
-				NavMenu = displayvar1();
-				NavMenu = displayvar2();
-				NavMenu = displayvar3();
-				
-				}
+                        </ul>
 
-				?>
+                    </div>
 
+                </nav>
+            </div>
 
             <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-10 mh-100">
 
