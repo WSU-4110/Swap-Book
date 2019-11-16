@@ -120,6 +120,7 @@ error_reporting(E_ALL);
 							</div>
 						</div>
 					</form>
+			
 
 									<button type="submit"  id="doSearch" name="doSearch" value="yes" class="btn btn-primary"><i class="fas fa-search text-grey"
 										   aria-hidden="true"></i></button>
