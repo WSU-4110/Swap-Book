@@ -86,14 +86,50 @@ error_reporting(E_ALL);
 
                 </div>
 
-                <div id="sectionMain" class="h-100">
+               <div id="sectionMain" class="h-100">
+				<?php if(isset(  $_SESSION["loggedIn"]) && $_SESSION["loggedIn"] == true  )
+				{
+				?>
+				
 				   <form id="searchForm" action="<?php $_PHP_SELF ?>" method = "POST">
+
 						<div class="sectionTop row">
 							<div class="input-group md-form form-sm form-2 pl-0">
 								<input class="form-control my-0 py-1 red-border" type="text" name="searchText" id="searchText" placeholder="Search" aria-label="Search">
 								<div class="input-group-append">
 									<span class="input-group-text red lighten-3" id="basic-text1">
 									
+									<button type="submit"  id="doSearch" name="doSearch" value="yes" class="btn btn-primary"><i class="fas fa-search text-grey"
+										   aria-hidden="true"></i></button>
+
+									</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="row radio">
+							<div class="col">
+								<label class="radio-inline">
+									<input type="radio" name="type" id="Radios1" value="1">
+									New
+								</label>
+							</div>
+							<div class="col">
+								<label class="radio-inline">
+									<input type="radio" name="type" id="Radios2" value="2">
+									Used
+								</label>
+							</div>
+							<div class="col">
+								<label class="radio-inline">
+									<input type="radio" name="type" id="Radios3" value="3">
+									E-Copy
+								</label>
+							</div>
+						</div>
+					</form>
+			
+
 									<button type="submit"  id="doSearch" name="doSearch" value="yes" class="btn btn-primary"><i class="fas fa-search text-grey"
 										   aria-hidden="true"></i></button>
 									</span>
@@ -121,6 +157,7 @@ error_reporting(E_ALL);
 							</div>
 						</div>
 					</form>
+					</form>
 					<div class="row">
 					<div class="row">
 					<table>
@@ -144,6 +181,19 @@ error_reporting(E_ALL);
 						</table>
 						</div>
 					</div>
+<div id="sectionAboutUs" class="h-100">
+                    <div class="row">
+                        <p>
+						Swap Book website is for Wayne State University students to swap textbooks. This site allows students to list textbooks they no longer need to swap for textbooks they will need. The system will maintain a database of textbooks based on student listings, provide search functionality, have secure login, and be mobile responsive.
+						</p>
+						<p>
+						This site is free for all members (Wayne State students & faculties ONLY)
+						</p>
+						<p>
+						Privacy Policy: You must use a "wayne.edu" email to sign up for this site. You must be a member of the Swap book in order to search for the book you are looking for. Swap Book will keep your personal information private and protected from others.
+						</p>
+                    </div>
+				  </div>
                     <div class="row">
                         <p>
                             Welcome to Swap-Book.
