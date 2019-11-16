@@ -58,6 +58,7 @@ $(document).ready(function() {
     console.log("lastTab: " + lastTab);
 });
 
+
 $(".logoImg").click(function () {
 
     $("#HomeButton").parent().addClass("active");
@@ -65,12 +66,16 @@ $(".logoImg").click(function () {
     $("#SwapButton").parent().removeClass("active");
     $("#SignOutButton").parent().removeClass("active");
     $("#SignInButton").parent().removeClass("active");
-<<<<<<< HEAD
+
+    $("#RegisterButton").parent().removeClass("active");
+    $("#sectionRegister").slideUp();
     $("#sectionAccount").slideUp();
     $("#sectionMain").slideDown();
     $("#sectionSwaps").slideUp();
     $("#sectionSignOut").slideUp();
     $("#sectionSignIn").parent().slideUp();
+    $("#sectionAboutUs").slideUp();
+    $("#sectionContactUs").slideUp();
 });
 
 $("#UserDDRightHomeButton").click(function () {
@@ -80,17 +85,17 @@ $("#UserDDRightHomeButton").click(function () {
     $("#SwapButton").parent().removeClass("active");
     $("#SignOutButton").parent().removeClass("active");
     $("#SignInButton").parent().removeClass("active");
-=======
->>>>>>> d60173acd7f766115cf5bc41383c3ed069a85924
+
+    $("#RegisterButton").parent().removeClass("active");
+    $("#sectionRegister").slideUp();
     $("#sectionAccount").slideUp();
     $("#sectionMain").slideDown();
     $("#sectionSwaps").slideUp();
     $("#sectionSignOut").slideUp();
-<<<<<<< HEAD
     $("#sectionSignIn").slideUp();
-});
-=======
-    $("#sectionSignIn").parent().slideUp();
+    $("#sectionAboutUs").slideUp();
+    $("#sectionContactUs").slideUp();
+   // $("#sectionSignIn").parent().slideUp();
 });
 
 $("#UserDDRightHomeButton").click(function () {
@@ -100,15 +105,19 @@ $("#UserDDRightHomeButton").click(function () {
     $("#SwapButton").parent().removeClass("active");
     $("#SignOutButton").parent().removeClass("active");
     $("#SignInButton").parent().removeClass("active");
+
+    $("#RegisterButton").parent().removeClass("active");
+    $("#sectionRegister").slideUp();
     $("#sectionAccount").slideUp();
     $("#sectionMain").slideDown();
     $("#sectionSwaps").slideUp();
     $("#sectionSignOut").slideUp();
     $("#sectionSignIn").slideUp();
+    $("#sectionAboutUs").slideUp();
+    $("#sectionContactUs").slideUp();
 
 });
 
->>>>>>> d60173acd7f766115cf5bc41383c3ed069a85924
 $("#UserDDRightAccountButton").click(function () {
     $("#PageTitle").html("Account");
     $("#HomeButton").parent().removeClass("active");
@@ -116,26 +125,36 @@ $("#UserDDRightAccountButton").click(function () {
     $("#SwapButton").parent().removeClass("active");
     $("#SignOutButton").parent().removeClass("active");
     $("#SignInButton").parent().removeClass("active");
+
+    $("#RegisterButton").parent().removeClass("active");
+    $("#sectionRegister").slideUp();
     $("#sectionAccount").slideDown();
     $("#sectionMain").slideUp();
     $("#sectionSwaps").slideUp();
     $("#sectionSignOut").slideUp();
     $("#sectionSignIn").slideUp();
+    $("#sectionAboutUs").slideUp();
+    $("#sectionContactUs").slideUp();
 
 });
 
 $("#UserDDRightSwapButton").click(function () {
-    $("#PageTitle").html("Swap");
+    $("#PageTitle").html("User Review");
     $("#HomeButton").parent().removeClass("active");
     $("#AccountButton").parent().removeClass("active");
     $("#SwapButton").parent().addClass("active");
     $("#SignOutButton").parent().removeClass("active");
     $("#SignInButton").parent().removeClass("active");
+
+    $("#RegisterButton").parent().removeClass("active");
+    $("#sectionRegister").slideUp();
     $("#sectionAccount").slideUp();
     $("#sectionMain").slideUp();
     $("#sectionSwaps").slideDown();
     $("#sectionSignOut").slideUp();
     $("#sectionSignIn").slideUp();
+    $("#sectionAboutUs").slideUp();
+    $("#sectionContactUs").slideUp();
 
 });
 
@@ -146,11 +165,16 @@ $("#UserDDRightSignOutButton").click(function () {
     $("#SwapButton").parent().removeClass("active");
     $("#SignOutButton").parent().addClass("active");
     $("#SignInButton").parent().removeClass("active");
+
+    $("#RegisterButton").parent().removeClass("active");
+    $("#sectionRegister").slideUp();
     $("#sectionAccount").slideUp();
     $("#sectionMain").slideUp();
     $("#sectionSwaps").slideUp();
     $("#sectionSignOut").slideDown();
     $("#sectionSignIn").slideUp();
+    $("#sectionAboutUs").slideUp();
+    $("#sectionContactUs").slideUp();
 });
 
 $("#UserDDRightSignInButton").click(function () {
@@ -160,12 +184,19 @@ $("#UserDDRightSignInButton").click(function () {
     $("#SwapButton").parent().removeClass("active");
     $("#SignOutButton").parent().addClass("active");
     $("#SignInButton").parent().addClass("active");
+
+    $("#RegisterButton").parent().removeClass("active");
+    $("#sectionRegister").slideUp();
     $("#sectionAccount").slideUp();
     $("#sectionMain").slideUp();
     $("#sectionSwaps").slideUp();
     $("#sectionSignOut").slideUp();
     $("#sectionSignIn").slideDown();
+    $("#sectionAboutUs").slideUp();
+    $("#sectionContactUs").slideUp();
 });
+
+
 
 $("#HomeButton").click(function () {
     $("#PageTitle").html("Home");
