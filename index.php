@@ -59,24 +59,24 @@ error_reporting(E_ALL);
                 </nav>
             </div>
 
-            <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-10 mh-100">
+             <div class="col col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-10 mh-100">
 
                 <div class="sectionTop row">
                     <div class="col col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9 ">
 
                         <h1 class="float-left img-fluid" id="PageTitle">Swap Book</h1>
-                        <img src="images/logo_xsmall.png" class="float-right logoImg " alt="Home" />
+                        <img src="images/logo.png" class="float-right logoImg " alt="Home" />
 
                     </div>
                     <div class="col col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 ">
                         <div class="dropdown float-right">
 
                             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img src="images/userImage.png" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+                                <img src="images/userMenu.png" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <a class="dropdown-item" href="#" id="UserDDRightHomeButton">Home</a>
-                                <a class="dropdown-item" href="#" id="UserDDRightSwapButton">Swap</a>
+                                <a class="dropdown-item" href="#" id="UserDDRightSwapButton">User Review</a>
                                 <a class="dropdown-item" href="#" id="UserDDRightAccountButton">Account</a>
                                 <a class="dropdown-item" href="#" id="UserDDRightSignOutButton">Sign Out</a>
 								<a class="dropdown-item" href="#" id="UserDDRightSignInButton">Sign In</a>
