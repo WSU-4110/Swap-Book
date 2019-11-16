@@ -78,32 +78,48 @@ error_reporting(E_ALL);
 
                 </div>
 
-                <?php 
-				     class searchBox 
-					 {
-						 private $var1 = 'searchForm';
-						 private $var2 = 'searchText';
-						 public $var3 = 'searchbox';
-
-						 public function post(){
-							echo $this -> var; 
-						}
-					 }
-
-					 class sectionTop extends searchBox{
-					     public $a = 'move';
-						 public $b = 'back';
-					     public function input()
-						  {
-						  	  searchBox = post();
-						  }
-					 	 if (isset($this)){
-                         echo get_class($this);
-						 }
-						 else
-						 echo "not available";
-					 }
+               <div id="sectionMain" class="h-100">
+				<?php if(isset(  $_SESSION["loggedIn"]) && $_SESSION["loggedIn"] == true  )
+				{
 				?>
+				
+				   <form id="searchForm" action="<?php $_PHP_SELF ?>" method = "POST">
+
+						<div class="sectionTop row">
+							<div class="input-group md-form form-sm form-2 pl-0">
+								<input class="form-control my-0 py-1 red-border" type="text" name="searchText" id="searchText" placeholder="Search" aria-label="Search">
+								<div class="input-group-append">
+									<span class="input-group-text red lighten-3" id="basic-text1">
+									
+									<button type="submit"  id="doSearch" name="doSearch" value="yes" class="btn btn-primary"><i class="fas fa-search text-grey"
+										   aria-hidden="true"></i></button>
+
+									</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="row radio">
+							<div class="col">
+								<label class="radio-inline">
+									<input type="radio" name="type" id="Radios1" value="1">
+									New
+								</label>
+							</div>
+							<div class="col">
+								<label class="radio-inline">
+									<input type="radio" name="type" id="Radios2" value="2">
+									Used
+								</label>
+							</div>
+							<div class="col">
+								<label class="radio-inline">
+									<input type="radio" name="type" id="Radios3" value="3">
+									E-Copy
+								</label>
+							</div>
+						</div>
+					</form>
 
 									<button type="submit"  id="doSearch" name="doSearch" value="yes" class="btn btn-primary"><i class="fas fa-search text-grey"
 										   aria-hidden="true"></i></button>
