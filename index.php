@@ -42,7 +42,7 @@ error_reporting(E_ALL);
                                 <a class="nav-link" id="AccountButton" href="#">About us</a>
                             </li>
                             <li class="nav-item leftNavItem">
-                                <a class="nav-link" id="SwapButton" href="#">Swaps</a>
+                                <a class="nav-link" id="ContactUs" href="#">Contact Us</a>
                             </li>
                         </ul>
 
@@ -68,12 +68,10 @@ error_reporting(E_ALL);
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <a class="dropdown-item" href="#" id="UserDDRightHomeButton">Home</a>
-
                                 <a class="dropdown-item" href="#" id="UserDDRightSwapButton">Swap</a>
                                 <a class="dropdown-item" href="#" id="UserDDRightAccountButton">Account</a>
                                 <a class="dropdown-item" href="#" id="UserDDRightSignOutButton">Sign Out</a>
-								
-                                <a class="dropdown-item" href="#" id="UserDDRightSignInButton">Sign In</a>
+								<a class="dropdown-item" href="#" id="UserDDRightSignInButton">Sign In</a>
                             </div>
                         </div>
                     </div>

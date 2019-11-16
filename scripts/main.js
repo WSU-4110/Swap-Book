@@ -173,16 +173,16 @@ $("#AccountButton").click(function () {
     $("#sectionSignIn").slideUp();
 });
 
-$("#SwapButton").click(function () {
-    $("#PageTitle").html("Swap");
+$("#ContactUs").click(function () {
+    $("#PageTitle").html("Contact Us");
     $("#HomeButton").parent().removeClass("active");
     $("#AccountButton").parent().removeClass("active");
-    $("#SwapButton").parent().addClass("active");
+    $("#ContactUs").parent().addClass("active");
     $("#SignOutButton").parent().removeClass("active");
     $("#SignInButton").parent().removeClass("active");
     $("#sectionAccount").slideUp();
     $("#sectionMain").slideUp();
-    $("#sectionSwaps").slideDown();
+    $("#sectionContactUs").slideDown();
     $("#sectionSignOut").slideUp();
     $("#sectionSignIn").slideUp();
 });
@@ -232,15 +232,11 @@ $("#SignInButton").click(function () {
     $("#sectionSwaps").slideUp();
     $("#sectionSignOut").slideUp();
     $("#sectionSignIn").slideDown();
-    console.log("what the fuck???");
+    console.log("what the blank??");
 });
 
 >>>>>>> d60173acd7f766115cf5bc41383c3ed069a85924
 
-/* comment this out to do mail to */
-//$("#emailForm").on("submit", function () {
-//    return  checkWayneEmail($("#InputEmail1").val());
-//})
 
 function checkWayneEmail(email) {
     var valid = email.endsWith("@wayne.edu");
