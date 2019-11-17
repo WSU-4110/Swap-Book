@@ -1,10 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\images",
-    "\\scripts",
-    "\\styles"
+    "\\css",
+    "\\images\\social",
+    "\\includes",
+    "\\includes\\GetData",
+    "\\scripts"
   ],
-  "SelectedNode": "\\index.html",
+  "SelectedNode": "\\scripts\\main.js",
   "PreviewInSolutionExplorer": false
 }
