@@ -351,5 +351,6 @@ function checkWayneEmail(email) {
         $("#sectionContactUs").slideUp();
         $("#sectionRegister").slideUp();
     }
+	
     return valid;
 }
