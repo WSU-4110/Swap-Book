@@ -16,9 +16,12 @@ body{
 
 .mainNav {
     font-variant: small-caps;
-    background-color: rgba(93, 155, 155, 1);
+    background-color: #5085a5;
 }
-
+.navbar-light .navbar-nav .nav-link
+{
+    color: white !important;
+}
 
 
 .navbar-expand-lg .mainNavBarNav {
@@ -34,6 +37,23 @@ body{
     background-color: #fff;
     color: black;
 }
+.social {
+
+    overflow: hidden;
+    position: fixed;
+    bottom: 2px;
+    right: 2px;
+}
+
+.socialIcon {
+    margin: 2px;
+    border-width: 0px;
+}
+
+.FollowUsHead {
+    text-shadow: 1px 1px 2px white, 0 0 0.7em #ddd, 0 0 0.8em white;
+}
+
 
 
 @media screen and (min-width: 1600px) {
