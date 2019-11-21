@@ -1,3 +1,35 @@
+<?php
+   include("lib/config.php");
+   session_start();
+
+    $error = '';
+   if($_SERVER["REQUEST_METHOD"] == "POST") {
+      
+       // username and password sent from form 
+      $myusername = mysqli_real_escape_string($conn,$_POST['email']);
+      $mypassword = mysqli_real_escape_string($conn,$_POST['pw']); 
+      
+      $sql = "SELECT email FROM user WHERE email='".$myusername."' AND pw='".$mypassword."'";
+      $result = mysqli_query($conn,$sql);
+        if($result == false) {
+         die("<pre>Query failed: ".$conn->error."\n$sql</pre>");
+      }
+      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+      $active = $row['active'];
+      
+      $count = mysqli_num_rows($result);
+      
+      // If result matched $myusername and $mypassword, table row must be 1 row
+      if($count == 1) {
+         $_SESSION['login_user'] = $myusername;
+         header("location: index.php");
+      }
+       else {
+         $error = "Invalid Email or Password";
+      }
+   }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,7 +53,7 @@
         <div class="menu">
             <div class="container-fluid">
 		      <div class="navbar-header">
-			     <a href="index.html"><img src="images/logo.png" id="icon" alt="SB Logo"/></a>
+			     <a href="index.html"><img src="img/logo.png" id="icon" alt="SB Logo"/></a>
                 </div>
             </div>
     </div>
@@ -36,11 +68,12 @@
                         <h2>Log In</h2>
                     </div>
                     <!-- Login Form -->
-                    <form>
-                        <input type="text" id="login" class="fadeIn second" name="login" placeholder="WSU Email">
-                        <input type="text" id="password" class="fadeIn third" name="login" placeholder="Password">
-                        <input type="submit" class="fadeIn fourth" value="Log In">
+                    <form action = "" method = "post">
+                        <input type="text" id="login" class="fadeIn second" name="email" placeholder="WSU Email">
+                        <input type="text" id="password" class="fadeIn third" name="pw" placeholder="Password">
+                        <input type="submit" id="login" class="fadeIn fourth" value="Log In">
                     </form>
+                    <div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
                     <!-- Remind Password -->
                     <div id="formFooter">
                         <a class="underlineHover" href="#" style="text-decoration: none">Forgot Password?</a>
