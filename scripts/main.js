@@ -354,3 +354,37 @@ function checkWayneEmail(email) {
 	
     return valid;
 }
+
+const img = "images\logo_xsmall.png";
+const text = "Swap Request granted!";
+const title = "Swap Book";
+const options = {
+    body: text,
+    icon: "images\logo_xsmall.png",
+    vibrate: [200, 100, 200],
+    tag: "NEW SWAP!",
+    image: img,
+    badge: "https://swap-book.com",
+    actions: [{ action: "Detail", title: "View", icon: "https://via.placeholder.com/128/ff0000" }]
+};
+
+navigator.serviceWorker.ready.then(function (serviceWorker) {
+    serviceWorker.showNotification(title, options);
+});
+}
+
+import {
+    isPushNotificationSupported,
+    sendNotification,
+    initializePushNotifications,
+    registerServiceWorker
+} from "./push-notifications.js";
+const pushNotificationSuported = isPushNotificationSupported();
+if (pushNotificationSuported) {
+    registerServiceWorker();
+    initializePushNotifications().then(function (consent) {
+        if (consent === 'granted') {
+            sendNotification();
+        }
+    });
+}
