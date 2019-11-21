@@ -1,0 +1,6 @@
+<html>
+<head>
+<title>Swap-Book</title>
+<meta name="description" content="Interact with fellow students and save money on textbooks!">
+<meta name ="keywords" content ="Free textbooks, Free text books, books, WSU books, Wayne State University books, Book exchange, Wayne State University">
+</head>
