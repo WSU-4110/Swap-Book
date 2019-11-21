@@ -1,4 +1,8 @@
 <?php
+if(!isset($_SESSION["user_id"]))
+{
+	$_SESSION["user_id"] = null;
+}
 	$servername = "localhost";
 			$username = "root";
 			$password = "2020";
@@ -31,8 +35,10 @@ while($row = $AllUsersResult->fetch_assoc()) {
   $allUsers[] = $row; 
 }
 
+
 	if (!empty($_POST))
 	{
+
 		if( isset($_POST["doAddReview"]) && $_POST["doAddReview"] == "yes" )
 		{
 		$_SESSION["lastTab"] = "swaps";
@@ -59,7 +65,10 @@ while($row = $AllUsersResult->fetch_assoc()) {
 	{
 		if($_POST["searchText"])
 		{
+		
 			$_SESSION["lastTab"] = "home";
+		
+
 			// Create connection
 			$searchConnection = new mysqli($servername, $username, $password, $dbname);
 
@@ -78,33 +87,43 @@ while($row = $AllUsersResult->fetch_assoc()) {
 			else {
 				$sql = "select * from book where (author like '%".$searchText."%' or title like '%".$searchText."%' or isbn like'%".$searchText."%') ";
 			}
-			
+		
+			//echo "<br><br><br>";
+			//var_dump($searchConnection);
 			$SearchResult = $searchConnection->query($sql);
+			//echo "<br><br><br>";
+			//var_dump($searchConnection);
+			//echo "<br><br><br>";
+			//var_dump($SearchResult);
 			if ($SearchResult->num_rows> 0) {
 
 			} 
 			else {
-				echo "No results!!!!!!!!!!!!!!";
+				echo "<!--No results!!!!!!!!!!!!!!-->";
 				}
+
 		}
 		$searchConnection->close();
+
 	}
 
 	else if( isset($_POST["signOut"]))
 	{
 	
-			$_SESSION["main"] = "home";
+			$_SESSION["lastTab"] = "home";////
 		$_SESSION["loggedIn"] = false;
 	}
 	else if(  $_POST["InputEmail1"] &&  $_POST["InputPassword1"]  )
 		{
 		
-			$_SESSION["main"] = "home";
+			$_SESSION["lastTab"] = "signIn";/////
+
 			$LogInFailed = true;
 			$userName = $_POST["InputEmail1"];
 			$password = $_POST["InputPassword1"];
 			$sql = "SELECT user_id,  username, password, permission_level, name FROM swapbook.user
 			where username = '".$userName."' and password = '".$password."'";
+
 			echo "<!--".$sql."-->";
 			$servername = "localhost";
 			$username = "root";
@@ -125,10 +144,12 @@ while($row = $AllUsersResult->fetch_assoc()) {
 							$row = $result->fetch_assoc();
 							$_SESSION["user_id"] = $row["user_id"];
 							$_SESSION["loggedIn"] = true;
+							$_SESSION["lastTab"] = "home";
 							$LogInFailed = false;
 						} 
 						else 
 						{
+						$_SESSION["lastTab"] = "signIn";
 							echo "<!--0 results-->";
 						}
 						$mainConnection->close();
@@ -142,4 +163,5 @@ while($row = $AllUsersResult->fetch_assoc()) {
 		{
 		echo "<!--Empty Post-->";
 		}
+
 ?>

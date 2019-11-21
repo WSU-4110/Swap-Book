@@ -14,20 +14,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css\page.css" rel="stylesheet">
+    <link href="css/page.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 
-<?php include('sitenav.php'); ?>
+<?php 
+    include('lib/config.php');
+    include('sitenav.php');
+    session_start();
+   $user_check = $_SESSION['login_user'];
+   $ses_sql = mysqli_query($conn,"select email from user where email = '$user_check' ");
+   $row = mysqli_fetch_array($ses_sql,MYSQLI_ASSOC);
+   $login_session = $row['email'];
+   
+    if(isset($_SESSION['login_user'])){
+     include('lib/usermenu.php');
+   }
+?>
 <body>
 
     
 <main>
-
     <div class="d-flex" id="wrapper">
         <div id="page-content-wrapper">
-            <div class="container-fluid">
-                <div class="col-12 col-md-9 col-lg-9 col-xl-9">
+            <div class="container-fluid" style="margin-top:50px">
+                <div class="col-12 ">
                 
 <h1>Privacy Policy</h1>
 

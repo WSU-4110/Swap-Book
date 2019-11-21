@@ -1,16 +1,13 @@
 <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<link href="css\sitenav.css" rel="stylesheet">
+<link href="css/sitenav.css" rel="stylesheet">
 
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
 
-<div class="container-fluid" style="padding-left: 0px; margin-left: 0px; padding-right: 0px; margin-right: 0px">
-<div class="row flex-xl-nowrap">
-<div class="col-12 col-md-3 col-xl-3 bd-sidebar">
 <div class="nav-side-menu">
-    <div class="brand"><img src="img/SBLogo.png" height="60" id="icon" alt="SB Logo"/></div>
+    <div class="brand"><img src="img/logo" height="60" id="icon" alt="SB Logo"/></div>
     <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
   
         <div class="menu-list">
@@ -38,7 +35,4 @@
                 </li>
             </ul>
      </div>
-    </div>
-    </div>
-    </div>
     </div>
