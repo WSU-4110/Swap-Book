@@ -1,16 +1,63 @@
 
 <?php
-/*$servername = "localhost";
-$username = "root";
-$password = "2020";
-$dbname = "swapbook";
+class mainConnection {
+    const BR = '<br />';
 
-// Create connection
-$mainConnection = new mysqli($servername, $username, $password);
+    var $servername;
+    var $dbname;
+    var $searchboxresult;
+    
+    
+    function getServerName()
+    {
+        return $this->servername;
+    }
+    
+    function setServerName($serverN)
+    {
+        $this->servername = $serverN;
+    }
 
-// Check connection
-if ($mainConnection->connect_error) {
-    die("Connection failed: " . $mainConnection->connect_error);
+
+    function getDatabaseName()
+    {
+        return $this->dbname;
+    }
+    
+    function setDatabaseName($databaseN)
+    {
+        $this->dbname = $databaseN;
+    }
+
+    
+    function getSearchBoxResult()
+    {
+        return $this->searchboxresult;
+    }
+    
+    function setSearchBoxResult($searchResult)
+    {
+        $this->searchboxresult = $searchResult;
+    }
+
+    public function show_connection(){
+           echo $this->getServerName().self::BR;
+           echo $this->servername.self::BR;
+           echo $this->getDatabaseName().self::BR;
+           echo $this->dbname.self::BR;
+           echo $this->getSearchBoxResult().self::BR;
+           echo $this->searchboxresult.self::BR;
+     }
 }
-echo "<!-- Connected successfully -->"; */
+
+$mainConnection = new mainConnection;
+$mainConnection-> setServerName('localhost');
+//$connection-> servername = $mainConnection->getServerName();
+//$mainConnection-> dbname = 'swapbook';
+$mainConnection-> setDatabaseName('swapbook');
+//$mainConnection-> searchboxresult = 'successful';
+$mainConnection-> setSearchBoxResult('successful');
+
+$mainConnection->show_connection();
+
 ?>
