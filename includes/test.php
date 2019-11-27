@@ -16,7 +16,7 @@ class myTest extends TestCase{
    	{
                 $mainConnection = new mainConnection;
 		$var = 'localhost';
-		$mainConnection->setServerName('localhost');
+		$mainConnection->setServerName('remotehost');
 		$this->assertNotEquals($var, $mainConnection->getServerName());
 	}
 
