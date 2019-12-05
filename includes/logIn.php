@@ -34,11 +34,8 @@ $allBooks[]  = array();
 while($row = $AllUsersResult->fetch_assoc()) {
   $allUsers[] = $row; 
 }
-
-
 	if (!empty($_POST))
 	{
-
 		if( isset($_POST["doAddReview"]) && $_POST["doAddReview"] == "yes" )
 		{
 		$_SESSION["lastTab"] = "swaps";
@@ -68,7 +65,6 @@ while($row = $AllUsersResult->fetch_assoc()) {
 		
 			$_SESSION["lastTab"] = "home";
 		
-
 			// Create connection
 			$searchConnection = new mysqli($servername, $username, $password, $dbname);
 
@@ -88,13 +84,8 @@ while($row = $AllUsersResult->fetch_assoc()) {
 				$sql = "select * from book where (author like '%".$searchText."%' or title like '%".$searchText."%' or isbn like'%".$searchText."%') ";
 			}
 		
-			//echo "<br><br><br>";
-			//var_dump($searchConnection);
 			$SearchResult = $searchConnection->query($sql);
-			//echo "<br><br><br>";
-			//var_dump($searchConnection);
-			//echo "<br><br><br>";
-			//var_dump($SearchResult);
+			
 			if ($SearchResult->num_rows> 0) {
 
 			} 
@@ -110,13 +101,13 @@ while($row = $AllUsersResult->fetch_assoc()) {
 	else if( isset($_POST["signOut"]))
 	{
 	
-			$_SESSION["lastTab"] = "home";////
+			$_SESSION["lastTab"] = "home";
 		$_SESSION["loggedIn"] = false;
 	}
 	else if(  $_POST["InputEmail1"] &&  $_POST["InputPassword1"]  )
 		{
 		
-			$_SESSION["lastTab"] = "signIn";/////
+			$_SESSION["lastTab"] = "signIn";
 
 			$LogInFailed = true;
 			$userName = $_POST["InputEmail1"];
@@ -163,5 +154,4 @@ while($row = $AllUsersResult->fetch_assoc()) {
 		{
 		echo "<!--Empty Post-->";
 		}
-
 ?>
