@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
     $('#MainHamMenu').on('click', function () {
         console.log("Toggle Pressed");
         $('#navCol').toggleClass('active');
@@ -44,9 +43,7 @@ $(document).ready(function() {
         $("#sectionSwaps").show();
     }
     else {
-
     }
-
     if (!signedIn) {
         $("#AccountButton").hide();
         $("#SwapButton").hide();
@@ -95,7 +92,6 @@ $("#UserDDRightHomeButton").click(function () {
     $("#sectionSignIn").slideUp();
     $("#sectionAboutUs").slideUp();
     $("#sectionContactUs").slideUp();
-   // $("#sectionSignIn").parent().slideUp();
 });
 
 $("#UserDDRightHomeButton").click(function () {
