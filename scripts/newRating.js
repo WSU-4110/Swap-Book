@@ -1,6 +1,4 @@
-﻿
-
-$("#NewRatingLevel1").click(function() {
+﻿$("#NewRatingLevel1").click(function() {
     handleRatingInput(1);
 });
 
@@ -28,7 +26,6 @@ function handleRatingInput(ratingLevel) {
     $("#NewRatingLevel4").removeClass("StarChecked");
     $("#NewRatingLevel5").removeClass("StarChecked");
     $("#NewRatingLevel1").addClass("StarChecked");
-
 
     if (ratingLevel > 1) {
         $("#NewRatingLevel2").addClass("StarChecked");
