@@ -1,7 +1,5 @@
 <?php session_start();
 
-
-
 if(!isset(  $_SESSION["loggedIn"]))
 {
 	$_SESSION["CurrentTab"]  = "main";
@@ -18,6 +16,5 @@ if($_SESSION["loggedIn"] == true)
 else{
 	//echo "You are not logged in";
 }
-
 
 ?>
