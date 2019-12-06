@@ -43,24 +43,21 @@ if (isset($_POST['search'])) {
                                 if (isset($_POST['search'])) {
                                     if (count($results) > 0) {
                                         foreach ($results as $r) {
+                                            $image = $r['image'];
+                                            $bookid = $r['book_id'];
                                             echo '<table width="800" border="1" cellspacing="2" cellpadding="4">';
-                                            echo '<tr> <td align="center" width="150"><a href="listing.php"><img src="img/cpp_malik_8thed" width="100" height="131"></a>';
+                                            echo '<tr><td align="center" width="150"><a href="listing.php?bookid='.$bookid.'">';
+                                            echo '<img src="img/book'.$image.'" width="100" height="131"></a>';
                                             echo '<td width="200">'.$r['ISBN'].'</td>';
                                             echo '<td width="250">'.$r['Author'].'</td>';
-                                            echo '<td width="700"><a href="listing.php">'.$r['Title'].'</a></td>';
+                                            echo '<td width="700"><a href="listing.php?bookid='.$bookid.'">'.$r['Title'].'</a></td>';
                                             echo '</table>';
-                                            
-
                                         }
                                     }
                                     else {
                                         echo "No matches found.";
                                     }
                                 }
-                                
-    
-                                
-                                
                                 ?>
                             </div>
                         </div>

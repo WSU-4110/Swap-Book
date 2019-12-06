@@ -1,17 +1,17 @@
 <?php
-   include('lib/config.php');
-   session_start();
+    include('lib/config.php');
+    if(!isset($_SESSION)) { 
+        session_start(); 
+    } 
    
-   $user_check = $_SESSION['login_user'];
+    $user_check = $_SESSION['login_user'];
    
-   $ses_sql = mysqli_query($conn,"select email from user where email = '$user_check' ");
-   
-   $row = mysqli_fetch_array($ses_sql,MYSQLI_ASSOC);
-   
-   $login_session = $row['email'];
-   
-   if(!isset($_SESSION['login_user'])){
-      header("location:login.php");
-      die();
-   }
+    $ses_sql = mysqli_query($conn,"select * from user where email = '$user_check' ");
+    $row = mysqli_fetch_array($ses_sql,MYSQLI_ASSOC);
+    $login_session = $row;
+    
+    if(!isset($_SESSION['login_user'])){
+        header("location:register.php");
+        die();
+    }
 ?>

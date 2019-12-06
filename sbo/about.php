@@ -21,6 +21,8 @@
 </head>
 
 <?php include('sitenav.php'); ?>
+<?php include('lib\session.php'); ?>
+<?php include('lib\usermenu.php'); ?>
 <body>
     
 <main>

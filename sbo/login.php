@@ -50,12 +50,14 @@
     
 <body>
     <!--header top-->
-        <div class="menu">
+        <div class="menu" style="height:80px">
             <div class="container-fluid">
 		      <div class="navbar-header">
-			     <a href="index.html"><img src="img/logo.png" id="icon" alt="SB Logo"/></a>
+			     <a href="about.php"><img src="img/SBLogo.png" alt="SB Logo" style="height:30"/></a></div>
+                <div>
+                <span style="float:right; padding:none; top:25px; right:50px; position:absolute"><a href="register.php">Sign Up</a></span>
                 </div>
-            </div>
+        </div>
     </div>
     <!--end Header-->
     
@@ -70,10 +72,10 @@
                     <!-- Login Form -->
                     <form action = "" method = "post">
                         <input type="text" id="login" class="fadeIn second" name="email" placeholder="WSU Email">
-                        <input type="text" id="password" class="fadeIn third" name="pw" placeholder="Password">
+                        <input type="password" id="password" class="fadeIn third" name="pw" placeholder="Password">
                         <input type="submit" id="login" class="fadeIn fourth" value="Log In">
                     </form>
-                    <div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
+            <div style = "font-size:0.85rem; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
                     <!-- Remind Password -->
                     <div id="formFooter">
                         <a class="underlineHover" href="#" style="text-decoration: none">Forgot Password?</a>

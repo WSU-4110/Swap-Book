@@ -5,7 +5,7 @@
 
       <ul class="nav navbar-nav">
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" ><?php echo $login_session; ?><span class="glyphicon glyphicon-user pull-right"></span></a>
+          <a href="proile.php" class="dropdown-toggle" data-toggle="dropdown" ><?php echo $login_session['email']; ?><span class="glyphicon glyphicon-user pull-right"></span></a>
           <ul class="dropdown-menu">
             <li><a href="account.php">Account Settings <span class="glyphicon glyphicon-cog pull-right"></span></a></li>
             <li class="divider"></li>

@@ -10,48 +10,51 @@
     <meta charset="UTF-8">
     <!-- If IE use the latest rendering engine -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- Set the page to the width of the device and set the zoon level -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <link href="css\sbmain.css" rel="stylesheet">
+    <!-- Set the page to the width of the device and set the zoom level -->
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link href="css\contact.css" rel="stylesheet">
 </head>
 
 <?php include('sitenav.php'); ?>
+<?php include('lib\session.php'); ?>
+<?php include('lib\usermenu.php'); ?>
     
 <body>
 
 <main>
-    <div class= "contact-form">
-
-</div>
-    <div class="wrapper2"><br><br>
-        <section class="instructions">CONTACT US</section>
-        <form name="" id="contact-form" method = "post" action="">
-            <input name="name" type="text" placeholder="Your Name" required><br>
-            <input email="WSU Email" name="email" type="email" placeholder="Your WSU EMail" required><br>
-            <!-- <input email="WSUemail" type="email" class="form-control" placeholder= "Your Wayne State Email" required><br> -->
-            <select size="1" name="contactreason" id="contactreason" required><br>
-                <option>Please select a topic...</option>
-                <option value="ACC">Account Help</option>
-                <option value="DISP">Swap Dispute</option>
-                <option value="TECH">Technical Support</option>
-                <option value="OTHER">Other</option>
-            </select><br>
-            <textarea name="message" placeholder="Please type your concern here..." rows="6" required></textarea><br>
-            <input type="submit" class="form-control submit" value="SEND MESSAGE">
-        </form>
+    <div class="d-flex" id="wrapper">
+        <div id="page-content-wrapper">
+            <div class="container-fluid" style="margin-top:75px">
+                <div class="col-12 ">
+                    <h3 style="color: #31708e">Contact SwapBook Support</h3>
+                    <h4>We are happy to help!</h4>
+                        <form action="https://formspree.io/xledwpjb" method="post">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="" required>
+                            <label for="email">Email</label>
+                            <input type="text" id="email" name="email" placeholder="" required>
+                            <label for="phone">Phone</label>
+                            <input type="text" id="phone" name="phone" placeholder="">
+                            <label for="topic">I need help with...</label>
+                            <select id="topic" name="topic">
+                                <option value="ACC">Account Help</option>
+                                <option value="DISP">Swap Dispute</option>
+                                <option value="TECH">Technical Support</option>
+                                <option value="OTHER">Other</option>
+                            </select>
+                            <label for="subject">Message</label>
+                            <textarea id="subject" name="subject" placeholder="" style="height:100px"></textarea>
+                            <input type="submit" value="Submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </main>
-        
+
 <footer>
-    <div id="footer" class="clearfloat">
-    <div id="copyright" class="clearfloat"><hr><br>
-        <section id="copyright">Copyright &copy; 2019 Swap Book</section><br>
-    </div>
-    </div>
 </footer>
-    
+
 </body>
-
 </html>
-

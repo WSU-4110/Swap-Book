@@ -1,3 +1,7 @@
+<?php
+   include("lib/cust_insert.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,12 +22,12 @@
     
 <body>
     <!--header top-->
-        <div class="menu">
+        <div class="menu" style="height:80px">
             <div class="container-fluid">
 		      <div class="navbar-header">
-			     <a href="index.html"><span class="glyphicon glyphicon-user"></span><img src="img/logo.png" id="icon" alt="SB Logo"/></a></div>
+			     <a href="about.php"><img src="img/SBLogo.png" alt="SB Logo" style="height:30"/></a></div>
                 <div>
-                <span style="float:right; padding:none">Have an account?&nbsp;<a href="login.php">Login</a></span>
+                <span style="float:right; padding:none; top:25px; right:50px; position:absolute"><a href="login.php">Log In</a></span>
                 </div>
         </div>
     </div>
@@ -37,14 +41,16 @@
                 <p>You must have a valid WSU email address in order to register</p>
             </div>
             <!-- Registration Form -->
-            <form method="post" action="lib\cust_insert.php" id="contact-form" onsubmit="">
+            <form method="post" action="" id="contact-form" onsubmit="">
                 <input type="text" style="text-align: left" placeholder="First Name" name="first_name" id="first_name" class="fadeIn second" required><br>
                 <input type="text" style="text-align: left" placeholder="Last Name" name="last_name" id="last_name" class="fadeIn third" required><br>
                 <input type="text" style="text-align: left" placeholder="WSU Email" name="email" id="email" pattern=".+@wayne.edu" class="fadeIn fourth" required><br><!-- <p>Password must not be the same as username</p> -->
-                <input type="text" style="text-align: left" autocomplete="off" placeholder="Password" name="pw" id="pw" class="fadeIn fifth" required><br>
+                <input type="password" style="text-align: left" autocomplete="off" placeholder="Password" name="pw" id="pw" class="fadeIn fifth" required><br>
+                <div style = "font-size:0.85rem; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
                 <p style="font-size:0.85rem; margin-bottom:0.2rem">Must be at least 8 characters, contain at least 1 uppercase character, and at least 1 number</p>
                 <input type="submit" class="fadeIn fourth" name="submit" id="submit" value="Sign Up" class="fadeIn sixth">
             </form>
+                                
             
         </div>
     </div>                                                                                              

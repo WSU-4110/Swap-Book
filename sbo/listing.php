@@ -15,22 +15,33 @@
     <link href="css/page.css" rel="stylesheet">
 </head>
     
-    <?php 
-    include('lib/config.php');
-    include('sitenav.php');
-    session_start();
-   $user_check = $_SESSION['login_user'];
-   $ses_sql = mysqli_query($conn,"select email from user where email = '$user_check' ");
-   $row = mysqli_fetch_array($ses_sql,MYSQLI_ASSOC);
-   $login_session = $row['email'];
+<?php include('sitenav.php'); ?>
+<?php include('lib\session.php'); ?>
+<?php include('lib\usermenu.php'); ?>
+    
+<?php
+    if(isset($_GET['bookid'])){
+        $bookid = $_GET['bookid'];
+        echo $bookid;
+    } 
+    else {
+        echo "failed";
+    }
    
-    if(isset($_SESSION['login_user'])){
-     include('lib/usermenu.php');
-   }
+    $ses_sql = mysqli_query($conn,"select * from book where book_id = '$bookid' ");
+    $row = mysqli_fetch_array($ses_sql,MYSQLI_ASSOC);
+    $book_session = $row;
+    $user_id = $book_session['user'];
+    $image = $book_session['image'];
+    $sql = mysqli_query($conn,"select * from user where id = '$user_id' ");
+    $row = mysqli_fetch_array($sql,MYSQLI_ASSOC);
+    $contact_session = $row;
+    $contact = $contact_session['email'];
+        
 ?>
+    
 <body>
 
-    
 <main>
     <div class="d-flex justify-content-center" id="wrapper">
         <div id="page-content-wrapper">
@@ -41,26 +52,44 @@
                             <div class="col-md-12">
                                 <div class="col-sm-6 col-md-4">
                                     <div class="thumbnail" >
-                                        <h4 class="text-center"><span class="label label-info"><?php echo $login_session; ?></span></h4>
-                                        <img src="img/cpp_malik_8thed" width="50%" height="50%">
+                                        <h4 class="text-center"><span class="label label-info">Swapper:&nbsp;<?php echo $contact_session['email']; ?></span></h4>
+                                        <?php echo '<img src="img/book'.$image.'" width="50%" height="50%">' ?>
                                         <div class="caption">
                                             <div class="row">
                                                 <div class="col-md-8 col-xs-8">
-                                                    <h4>C++ Programming: From Problem Analysis to Program Design</h4>
+                                                    <h4><?php echo $book_session['Title']; ?></h4>
                                                 </div>
                                                 <div class="col-md-4 col-xs-4 price">
-                                                    <h4><label>8th Edition</label></h4>
+                                                    <h4><label>11th Edition</label></h4>
                                                 </div>
                                             </div>
                                             <p>Paperback, Used</p>
                                             <div class="row">
                                                 <div class="col-md-6">
-                                                    <form action="obsfns.php" method="get">
-                                                    <a class="btn btn-primary btn-product"><span class="glyphicon glyphicon-refresh"></span> Let's Swap!</a> 
+                                                    <form action="" method="post">
+                                                    <a class="btn btn-primary btn-product" input type="submit" value="Let's Swap"><input type="hidden" name="button_pressed" value="1" /><span class="glyphicon glyphicon-refresh"></span>&nbsp;Let's Swap!</a> 
                                                     </form>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <a href="#" class="btn btn-success btn-product"><span class="glyphicon glyphicon-heart"></span> 5</a></div>
+                                                    <a href="#" class="btn btn-success btn-product"><span class="glyphicon glyphicon-heart"></span>&nbsp;<?php echo $book_session['likes']; ?></a>
+                                                </div>
+
+<?php                                                
+if(isset($_POST['button_pressed']))
+{
+    $to      = $contact_session['email'];
+    $subject = 'Someone wants to swap books with you!';
+    $message = "Can we trade books? Login now to see inventory from" .$login_session['email']. "!";
+    $headers = 'From: bb8648@wayne.edu' . "\r\n" .
+        'Reply-To: bb8648@wayne.edu' . "\r\n" .
+        'X-Mailer: PHP/' . phpversion();
+
+    mail($to, $subject, $message, $headers);
+
+    echo 'Email Sent.';
+}
+
+?>
                                             </div>
                                         </div>
                                     </div>

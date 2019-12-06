@@ -14,7 +14,7 @@ body {
     background:#fff;
     border:1px solid #ccc;
     border-radius:4px;
-    width:300px;    
+    width:200px;    
 }
 .dropdown-menu>li>a {
     color:#428bca;
@@ -23,7 +23,7 @@ body {
     border-radius:4px;
     box-shadow:none;
     margin-top:20px;
-    width:300px;
+    width:200px;
 }
 .dropdown ul.dropdown-menu:before {
     content: "";

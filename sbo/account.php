@@ -2,6 +2,7 @@
 if (isset($_POST['search'])) {
     require "lib/search.php";
 }
+include("lib/cust_update.php");
 ?>
 
 <!DOCTYPE html>
@@ -33,23 +34,20 @@ if (isset($_POST['search'])) {
                 <div class="col-12 ">
         <hr>
                 <div class="row">
-                    <div class="col-sm-10"><h3>bb8648@wayne.edu</h3></div>
+                    <div class="col-sm-10"><h3>Hello,&nbsp;<?php echo $login_session['first_name']; ?></h3></div>
                 </div>
                 <div class="row">
                     <div class="col-sm-3"><!--left col-->
                         <div class="text-center">
-                            <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar"><h6>Upload a photo...</h6>
-                            <input type="file" class="text-center center-block file-upload">
+                            <img src="img/default.png" class="avatar img-circle img-thumbnail" alt="avatar"><h6>Upload a photo...</h6>
+                            <input type="file" class="text-center center-block file-upload" id="image" name="image">
                         </div></hr><br>
                     
                     <div class="panel panel-default">
                     </div>
                     
                     <ul class="list-group">
-                        <li class="list-group-item text-muted">Activity<i class="fa fa-dashboard fa-1x"></i></li>
-                        <li class="list-group-item text-right"><span class="pull-left"><strong>Swaps</strong></span>5</li>
                         <li class="list-group-item text-right"><span class="pull-left"><strong>Reviews</strong></span>4.97 &#x2605</li>
-                        <li class="list-group-item text-right"><span class="pull-left"><strong>Faves</strong></span>17</li>
                     </ul>
                 </div><!--/col-3-->
                 <div class="col-sm-9">
@@ -62,34 +60,34 @@ if (isset($_POST['search'])) {
                         <div class="tab-pane active" id="home">
                             
                             <h3>Profile Information</h3>
-                            <p>Your name and phone number will not appear anywhere else on SwapBook.</p>
+                            <p>Your first and last name will not appear anywhere else on SwapBook.</p>
                             <hr>
                             
-                            <form class="form" action="##" method="post" id="registrationForm">
+                            <form class="form" action="" method="post" id="updateform" onsubmit="">
                                 <div class="form-group">
                                     <div class="col-xs-6">
                                         <label for="first_name"><h4>First Name</h4></label>
-                                        <input type="text" class="form-control" name="first_name" id="first_name" placeholder="// will display first name">
+                                        <input type="text" class="form-control" name="first_name" id="first_name" value="<?php echo $login_session['first_name']; ?>">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-xs-6">
                                         <label for="last_name"><h4>Last Name</h4></label>
-                                        <input type="text" class="form-control" name="last_name" id="last_name" placeholder="// will display last name">
+                                        <input type="text" class="form-control" name="last_name" id="last_name" value="<?php echo $login_session['last_name']; ?>">
                                     </div>
                                 </div>
                                 <div class="form-group">
                           <div class="col-xs-6">
-                              <label for="phone"><h4>Phone</h4></label>
-                              <input type="text" class="form-control" name="phone" id="phone" placeholder="// will display phone">
+                              <label for="email"><h4>Email</h4></label>
+                              <input type="text" class="form-control" name="email" id="email" placeholder="<?php echo $login_session['email']; ?>"readonly>
                           </div>
                       </div>
           
                       <div class="form-group">
                           
                           <div class="col-xs-6">
-                              <label for="email"><h4>Email</h4></label>
-                              <input type="email" class="form-control" name="email" id="email" placeholder="// will display email - read only" readonly>
+                              <label for="acc_date"><h4>Member Since</h4></label>
+                              <input type="acc_date" class="form-control" name="acc_date" id="acc_date" placeholder="<?php echo $login_session['acc_date']; ?>" readonly>
                           </div>
                       </div>
 
@@ -97,11 +95,9 @@ if (isset($_POST['search'])) {
                            <div class="col-xs-12">
                                 <br>
                               	<button class="btn btn-lg btn-success" type="submit" style="background-color:#5085a5; border:none"><i class="glyphicon glyphicon-ok-sign"></i> Update Profile</button>
-                               	<button class="btn btn-lg" type="reset" style="border:none"><i class="glyphicon glyphicon-repeat"></i> Reset</button>
                             </div>
                       </div>
-              	</form>
-              
+              	</form>         
               <hr>
               
              </div><!--/tab-pane-->
